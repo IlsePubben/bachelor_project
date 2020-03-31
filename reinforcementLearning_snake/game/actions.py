@@ -1,8 +1,8 @@
 import enum 
 
 class Actions(enum.Enum):
-    UP = 1
-    DOWN = 2
-    LEFT = 3
-    RIGHT = 4
-    IDLE = 5
+    UP = [-1,0]
+    DOWN = [1,0]
+    LEFT = [0,-1]
+    RIGHT = [0,1]
+    IDLE = [0,0]

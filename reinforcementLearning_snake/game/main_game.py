@@ -1,6 +1,7 @@
 import pyglet, random
-from game import snake, apple, util, resources, actions
+from game import snake, util, resources, actions
 from pyglet.window import key
+import parameters
 
 window = pyglet.window.Window(8*util.gridSize,8*util.gridSize)
 
@@ -19,6 +20,9 @@ epoch_label = pyglet.text.Label("Epoch 1", x=window.width/2, y=window.height-32,
 key_handler = key.KeyStateHandler()
 window.push_handlers(key_handler)
 
+epochs = 1
+points = 0
+
 @window.event
 def on_draw():
     window.clear()
@@ -30,15 +34,22 @@ def update(timeStep):
     action = select_action()
     
     if  not is_alive(snake.head):
-        reset()
+        if epochs >= parameters.max_epochs:
+            window.close()
+            pyglet.app.exit()
+        else: 
+            reset()
     
     snake.move(action.name)
     
     if snake.found_apple(apple):
         snake.eat_apple()
+        global points 
+        points += 1
         spawn_apple()
     
 def select_action():
+    algorithm = "random"
     if algorithm == "random":
         action = actions.Actions(random.randint(1, 4))
     elif algorithm == "manual":
@@ -67,6 +78,8 @@ def reset():
     snake.head.y = util.random_location(window.height)
     spawn_apple()
     global epochs
+    global points 
+    points = 0
     epochs += 1
     epoch_label.text = "Epoch " + str(epochs)
     

@@ -1,4 +1,4 @@
-import random 
+import random
 
 gridSize = 32
 

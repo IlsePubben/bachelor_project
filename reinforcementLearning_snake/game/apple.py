@@ -1,5 +1,5 @@
 import pyglet 
-import resources
+from game import resources
 
 class Apple(pyglet.sprite.Sprite):
     

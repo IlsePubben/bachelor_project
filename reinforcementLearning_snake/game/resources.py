@@ -4,7 +4,7 @@ def center_image(image):
     image.anchor_x = image.width/2
     image.anchor_y = image.height/2
 
-pyglet.resource.path = ["resources"]
+pyglet.resource.path = ["game/resources"]
 pyglet.resource.reindex()
 
 apple_image = pyglet.resource.image("sprite_apple.png")

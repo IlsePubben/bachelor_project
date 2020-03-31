@@ -1,5 +1,5 @@
-import pyglet, random 
-import snake, apple, util, resources, actions
+import pyglet, random
+from game import snake, apple, util, resources, actions
 from pyglet.window import key
 
 window = pyglet.window.Window(8*util.gridSize,8*util.gridSize)
@@ -27,11 +27,9 @@ def on_draw():
     epoch_label.draw()
 
 def update(timeStep):
-    action = actions.Actions(random.randint(1, 4))
-    #action = manual_movement()
+    action = select_action()
     
     if  not is_alive(snake.head):
-        print("dead ",action.name, ' ', epochs, '\n')
         reset()
     
     snake.move(action.name)
@@ -40,29 +38,28 @@ def update(timeStep):
         snake.eat_apple()
         spawn_apple()
     
-  
+def select_action():
+    if algorithm == "random":
+        action = actions.Actions(random.randint(1, 4))
+    elif algorithm == "manual":
+        action = manual_movement()
+    return action 
+
 def is_alive(obj):
     #out of bounds 
     minXY = util.gridSize/2
     maxXY = window.width - util.gridSize/2
     if obj.x < minXY or obj.x > maxXY or obj.y < minXY or obj.y > maxXY:
-        print("out of bounds")
         return False
-    return not on_snake_tail(snake.head)
+    return not snake.on_snake_tail(snake.head)
     return True
-
-def on_snake_tail(obj):
-    for tail in snake.tail[:-1]:
-        if tail.x == obj.x and tail.y == obj.y:
-            return True
-    return False
 
 def spawn_apple():
     valid_location = False
     while (not valid_location):
         apple.x = util.random_location(window.width)
         apple.y = util.random_location(window.height)
-        valid_location = not on_snake_tail(apple)
+        valid_location = not snake.on_snake_tail(apple)
 
 def reset():
     snake.tail.clear()
@@ -80,7 +77,8 @@ def manual_movement():
     if key_handler[key.RIGHT]: return actions.Actions(4)
     return actions.Actions(5)
 
-if __name__ == '__main__': 
-    pyglet.clock.schedule_interval(update,1/10)
-    epochs = 1
-    pyglet.app.run()
+# if __name__ == '__main__': 
+#     algorithm = util.handle_command_line_options(sys.argv[1:])
+#     pyglet.clock.schedule_interval(update,1/8)
+#     epochs = 1
+#     pyglet.app.run()

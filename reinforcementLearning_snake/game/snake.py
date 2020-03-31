@@ -1,5 +1,5 @@
 import pyglet 
-import resources, util 
+from game import resources, util 
 
 class Snake():
     
@@ -16,7 +16,7 @@ class Snake():
     def move(self, action):
         
         #used for manual movement only 
-        if action is "IDLE":
+        if action == "IDLE":
             return 
         
         #move tail
@@ -47,21 +47,12 @@ class Snake():
     def found_apple(self, apple):
         return (self.head.x == apple.x and self.head.y == apple.y)
     
-
     
-    #temporary function 
-    def stays_alive(self, posX, posY):
-        #ate tail 
+    def on_snake_tail(self,obj):
         for tail in self.tail[:-1]:
-            if tail.x == self.head.x and tail.y == self.head.y:
-                return False
-            
-        #within bounds
-        minXY = util.gridSize/2
-        maxXY = 256 - util.gridSize/2
-        return (posX >= minXY and posX <= maxXY and 
-                posY >= minXY and posY <= maxXY)
-
+            if tail.x == obj.x and tail.y == obj.y:
+                return True
+        return False
     
     def eat_apple(self): 
         new_tail = pyglet.sprite.Sprite(img=resources.snake_image, x=self.head.x,

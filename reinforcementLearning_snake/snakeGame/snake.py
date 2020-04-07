@@ -1,5 +1,5 @@
 import pyglet 
-from game import resources, util 
+from snakeGame import resources, util 
 
 class Snake():
     

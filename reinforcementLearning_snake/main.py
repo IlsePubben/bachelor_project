@@ -36,7 +36,7 @@ def handle_command_line_options(argv):
 if __name__ == '__main__': 
     algorithm = handle_command_line_options(sys.argv[1:])
     # print(algorithm)
-    frequency = 1/7
+    frequency = 1/15
     if algorithm == 'q-learning':
         # visual_game.pyglet.clock.schedule_interval(algorithms.q_learning,frequency)
         # performed as often as possible 
@@ -48,11 +48,10 @@ if __name__ == '__main__':
     elif algorithm == 'manual':
         visual_game.pyglet.clock.schedule_interval(algorithms.manual,frequency)
     else:
-        # print(algorithm)
         model = load_model(algorithm)
         numGames = input("How many games do you want to run?\n")
         visual_game.pyglet.clock.schedule_interval(algorithms.test, frequency, model,int(numGames))
-    # visual_game.pyglet.app.run()
+        visual_game.pyglet.app.run()
     filepath = algorithm + str(param.max_epochs)
     MLP.mlp.save(filepath)
     print("model saved")

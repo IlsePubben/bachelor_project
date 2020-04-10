@@ -23,8 +23,9 @@ def q_learning(timestep):
     
     #toggle for visualisation 
     # visual_game.visualize(game_state)
+    # print(state)
     
-    qValues = MLP.mlp.predict(state.reshape(1,192), batch_size=1)
+    qValues = MLP.mlp.predict(state.reshape(1,8), batch_size=1)
     
     if np.random.random() < param.epsilon:
         action = np.random.randint(0,4) #choose random action 
@@ -32,7 +33,7 @@ def q_learning(timestep):
         action = np.argmax(qValues) #choose best action 
     
     new_state, reward = game_state.make_move(util.actions[action])
-    new_qValues = MLP.mlp.predict(new_state.reshape(1,192), batch_size=1)
+    new_qValues = MLP.mlp.predict(new_state.reshape(1,8), batch_size=1)
     maxQ = np.max(new_qValues)
     if reward == param.reward_dead: #terminal state
         update = reward
@@ -42,23 +43,19 @@ def q_learning(timestep):
     
     target_output = qValues 
     target_output[0][action] = update
-    MLP.mlp.fit(state.reshape(1,192),target_output,batch_size=1,verbose=0)
+    MLP.mlp.fit(state.reshape(1,8),target_output,batch_size=1,verbose=0)
     state = new_state
     
-    if game_state.time_stuck > 128:
+    if game_state.time_stuck > 3*param.game_size:
         print("got stuck")
         on_death()
-    
-    if reward == param.reward_apple:
-        game_state.spawn_apple()
-        game_state.update_state(state)
     
     if param.epsilon > 0.01:
         param.epsilon -= (1/param.max_epochs)
     
     #toggle for visualisation 
     # if epoch >= param.max_epochs:
-    #     visual_game.end_visualization()
+        # visual_game.end_visualization()
     
 def random_actions(timestep):
     global epoch 
@@ -113,17 +110,17 @@ def test(timestep, model, numGames):
     global state
     global game_state
     global time_stuck
-    qValues = model.predict(state.reshape(1,192),batch_size=1)
+    qValues = model.predict(state.reshape(1,8),batch_size=1)
     action = np.argmax(qValues)
     state, reward = game_state.make_move(util.actions[action])
     
     if reward == param.reward_dead: 
         on_death()
         
-    if epoch >= numGames:
+    if epoch > numGames:
         visual_game.end_visualization()
 
-    if game_state.time_stuck > 128:
+    if game_state.time_stuck > 3*param.game_size:
         print("got stuck")
         on_death()
     

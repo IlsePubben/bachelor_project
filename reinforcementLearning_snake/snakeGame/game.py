@@ -1,11 +1,22 @@
 import numpy
 import parameters as param
 from snakeGame import util 
+from enum import IntEnum
 
 snake_head = numpy.array([0.9,0.1,0.1])
 snake_tail = numpy.array([0.1,0.9,0.1])
 apple = numpy.array([0.1,0.1,0.9])
 empty = numpy.array([0.1,0.1,0.1])
+
+class Snake_vision(IntEnum):
+    UP = 0
+    RIGHT = 1
+    LEFT = 2
+    DOWN = 3
+    NORTH = 4
+    EAST = 5
+    SOUTH = 6
+    WEST = 7
 
 class Game():
     
@@ -28,7 +39,8 @@ class Game():
           
     def make_move(self, action):
         self.tail_locations.append(self.head_location)
-        new_state = numpy.zeros((param.game_size,param.game_size,3))
+        # new_state = numpy.zeros((param.game_size,param.game_size,3))
+        new_state = numpy.zeros(8)
         
         new_head_location = (self.head_location[0] + action[0], self.head_location[1] + action[1])
         #out of bounds
@@ -48,6 +60,7 @@ class Game():
         #found apple
         if self.head_location == self.apple_location:
             reward = param.reward_apple
+            self.spawn_apple()
             self.points += 1
             self.time_stuck = 0
         else: 
@@ -62,17 +75,32 @@ class Game():
         self.time_stuck += 1
         return new_state, reward
     
+    def valid_location(self, location):
+        return (not util.out_of_bounds(location) and not self.on_tail(location))
+    
+    
     def update_state(self, state):
-        # if self.head_location == self.apple_location:
-        #     state[self.head_location] = snake_head + apple
-        # else: 
-        self.place_tail(state)
-        state[self.head_location] += snake_head
-        state[self.apple_location] += apple
+        if not self.valid_location(self.head_location + (-1,0)):
+            state[Snake_vision.UP] = 1
+        if not self.valid_location(self.head_location + (0,1)):
+            state[Snake_vision.RIGHT] = 1
+        if not self.valid_location(self.head_location + (1,0)):
+            state[Snake_vision.DOWN] = 1
+        if not self.valid_location(self.head_location + (0,-1)):
+            state[Snake_vision.LEFT] = 1
+        #direction apple 
+        if self.apple_location[0] > self.head_location[0]:
+            state[Snake_vision.NORTH] = 1
+        elif self.apple_location[0] < self.head_location[0]:
+            state[Snake_vision.SOUTH] = 1
+        if self.apple_location[1] > self.head_location[1]:
+            state[Snake_vision.EAST] = 1
+        elif self.apple_location[1] < self.head_location[1]:
+            state[Snake_vision.WEST] = 1
         
     
     def get_state(self):
-        state = numpy.zeros((param.game_size,param.game_size,3))
+        state = numpy.zeros(8)
         self.update_state(state)
         return state
     
@@ -86,11 +114,11 @@ class Game():
                 return True
         return False
 
-    def place_tail(self, state):
-        if len(self.tail_locations) > 0: 
-            for location in self.tail_locations:
-                if not util.out_of_bounds(location):
-                    state[location] = snake_tail
+    # def place_tail(self, state):
+    #     if len(self.tail_locations) > 0: 
+    #         for location in self.tail_locations:
+    #             if not util.out_of_bounds(location):
+    #                 state[location] = snake_tail
     
     def display_game(self): 
         grid = numpy.zeros((param.game_size,param.game_size),dtype=str)

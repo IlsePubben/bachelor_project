@@ -5,12 +5,9 @@ import parameters as param
 
 gridSize = 32
 
-window = pyglet.window.Window(8*gridSize,8*gridSize)
+window = pyglet.window.Window(param.game_size*gridSize,param.game_size*gridSize)
 
 snake_batch = pyglet.graphics.Batch()
-
-# snake = snake.Snake((util.random_location(window.width), 
-#                      util.random_location(window.height)), snake_batch)
                     
 apple = pyglet.sprite.Sprite(img=resources.apple_image, x=0, y=0)
 
@@ -37,7 +34,7 @@ def on_draw():
     epoch_label.draw()
     
 def visualize(game, action=[-1,0]):
-    # rotate_head(action)
+    rotate_head(action)
     snakeHead.x = gridSize/2 + game.head_location[1] * gridSize
     snakeHead.y = window.height - (gridSize/2 + game.head_location[0] * gridSize)
     
@@ -51,13 +48,13 @@ def visualize(game, action=[-1,0]):
         idx += 1
 
 def rotate_head(action):
-    if action == [-1,0]:
+    if action == 0:
         snakeHead.rotation = 0
-    elif action == [1,0]:
+    elif action == 1:
         snakeHead.rotation = 180
-    elif action == [0,-1]: 
+    elif action == 2: 
         snakeHead.rotation = -90
-    elif action == [0,1]:
+    elif action == 3:
         snakeHead.rotation = 90
 
 def reset(epoch):

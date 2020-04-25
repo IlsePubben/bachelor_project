@@ -8,15 +8,23 @@ snake_tail = numpy.array([0.1,0.9,0.1])
 apple = numpy.array([0.1,0.1,0.9])
 empty = numpy.array([0.1,0.1,0.1])
 
-class Snake_vision(IntEnum):
-    UP = 0
-    RIGHT = 1
-    LEFT = 2
-    DOWN = 3
-    NORTH = 4
-    EAST = 5
-    SOUTH = 6
-    WEST = 7
+# class Snake_vision(IntEnum):
+#     UP = 0
+#     RIGHT = 1
+#     LEFT = 2
+#     DOWN = 3
+#     NORTH = 4
+#     EAST = 5
+#     SOUTH = 6
+#     WEST = 7
+    
+# class Snake_vision(IntEnum):
+#     UP = 0
+#     RIGHT = 1
+#     LEFT = 2
+#     DOWN = 3
+#     APPLEDX = 4
+#     APPLEDY = 5
 
 class Game():
     
@@ -39,8 +47,9 @@ class Game():
           
     def make_move(self, action):
         self.tail_locations.append(self.head_location)
-        # new_state = numpy.zeros((param.game_size,param.game_size,3))
-        new_state = numpy.zeros(8)
+        new_state = numpy.zeros(2*5**2+2)
+        # new_state = numpy.zeros(6)
+        reward = 0
         
         new_head_location = (self.head_location[0] + action[0], self.head_location[1] + action[1])
         #out of bounds
@@ -48,12 +57,6 @@ class Game():
             # print("out of bounds")
             reward = param.reward_dead
             return new_state, reward
-        
-        #a postive reward is received when we get closer to the apple
-        if self.distance_to_apple(new_head_location) < self.distance_to_apple(self.head_location):
-            reward = param.reward_approach_apple
-        else:
-            reward = param.reward_avoid_apple
             
         self.head_location = new_head_location 
         
@@ -71,36 +74,59 @@ class Game():
             reward = param.reward_dead
         
         self.update_state(new_state)
+        # print(new_state, '\n')
         
         self.time_stuck += 1
         return new_state, reward
     
     def valid_location(self, location):
+        # print(location)
         return (not util.out_of_bounds(location) and not self.on_tail(location))
     
+    # #without vision grid 
+    # def update_state(self, state):
+    #     if not self.valid_location((self.head_location[0] - 1, self.head_location[1])):
+    #         state[Snake_vision.UP] = 1
+    #     if not self.valid_location((self.head_location[0], self.head_location[1] + 1)):
+    #         state[Snake_vision.RIGHT] = 1
+    #     if not self.valid_location((self.head_location[0] + 1, self.head_location[1])):
+    #         state[Snake_vision.DOWN] = 1
+    #     if not self.valid_location((self.head_location[0], self.head_location[1] - 1)):
+    #         state[Snake_vision.LEFT] = 1
+    #     #direction apple scaled between -2 and 2
+    #     state[Snake_vision.APPLEDX] = (self.apple_location[1] - self.head_location[1]) / param.game_size * 2
+    #     state[Snake_vision.APPLEDY] = (self.apple_location[0] - self.head_location[0]) / param.game_size * 2
+    #     # if self.apple_location[0] > self.head_location[0]:
+    #     #     state[Snake_vision.NORTH] = 1
+    #     # elif self.apple_location[0] < self.head_location[0]:
+    #     #     state[Snake_vision.SOUTH] = 1
+    #     # if self.apple_location[1] > self.head_location[1]:
+    #     #     state[Snake_vision.EAST] = 1
+    #     # elif self.apple_location[1] < self.head_location[1]:
+    #     #     state[Snake_vision.WEST] = 1
     
+    #with 5x5 vision grid
     def update_state(self, state):
-        if not self.valid_location(self.head_location + (-1,0)):
-            state[Snake_vision.UP] = 1
-        if not self.valid_location(self.head_location + (0,1)):
-            state[Snake_vision.RIGHT] = 1
-        if not self.valid_location(self.head_location + (1,0)):
-            state[Snake_vision.DOWN] = 1
-        if not self.valid_location(self.head_location + (0,-1)):
-            state[Snake_vision.LEFT] = 1
-        #direction apple 
-        if self.apple_location[0] > self.head_location[0]:
-            state[Snake_vision.NORTH] = 1
-        elif self.apple_location[0] < self.head_location[0]:
-            state[Snake_vision.SOUTH] = 1
-        if self.apple_location[1] > self.head_location[1]:
-            state[Snake_vision.EAST] = 1
-        elif self.apple_location[1] < self.head_location[1]:
-            state[Snake_vision.WEST] = 1
+        idx = 0
+        for i in range(-2,3):
+            for j in range(-2,3):
+                location = (self.head_location[0] + i, self.head_location[1] + j)
+                if (not self.valid_location(location)
+                    and not (i==0 and j==0)):
+                    state[idx] = 1
+                elif (location == self.apple_location):
+                    state[idx+25] = 1
+                idx += 1
+                # print(idx)
+
+        state[len(state) - 1] = (self.apple_location[1] - self.head_location[1]) / param.game_size * 2
+        state[len(state) - 2] = (self.apple_location[0] - self.head_location[0]) / param.game_size * 2               
         
     
     def get_state(self):
-        state = numpy.zeros(8)
+        # state = numpy.zeros(8)
+        # state = numpy.zeros(6)
+        state = numpy.zeros(2*5**2+2)
         self.update_state(state)
         return state
     

@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt 
 from statistics import mean 
+import os
 
 average_points = list() 
 last1000points = list()
@@ -32,7 +33,21 @@ def add_points(epoch, points):
         average_points.append(average)
         # print("Epoch: ", epoch, " average: ", average, "high score: ", max_points)
         max_points = 0
-        
+ 
+def plot_directory(directory, epochs, epsilon0):
+    x_axis = [i*100 for i in range(1,epochs//100)]
+    for filename in os.listdir(directory):
+        if filename.endswith(".txt"):
+            filepath = directory + filename
+            with open(filepath, "r") as file:
+                model = eval(file.readline())
+            plt.plot(x_axis, model, label=filename)
+    plt.xlabel("Epoch")
+    plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
+    plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")
+    plt.legend()
+    plt.show()
+ 
 def plot_multiple_models(filepaths_label, epochs, epsilon0):
     x_axis = [i*100 for i in range(1,epochs//100)]
     for key in filepaths_label: 

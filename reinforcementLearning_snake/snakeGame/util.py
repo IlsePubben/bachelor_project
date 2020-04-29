@@ -26,8 +26,10 @@ def save_model(model):
     model.mlp.save(filepath)
     print("model saved as ", filepath)
     filepath += ".txt"
-    with open(filepath,"w") as file: 
+    with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
+        file.write("\n\n")
+        file.close()
         
 def usage():
     print("OPTIONS: \n -h --help\n -a --algorithm: random | manual | q-learning",

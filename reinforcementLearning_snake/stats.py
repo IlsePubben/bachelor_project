@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt 
 from statistics import mean 
 import os
+import numpy as np 
 
 average_points = list() 
 last1000points = list()
@@ -34,6 +35,25 @@ def add_points(epoch, points):
         # print("Epoch: ", epoch, " average: ", average, "high score: ", max_points)
         max_points = 0
  
+def average_list_file(filepath): 
+    lists = [[]]
+    with open(filepath, "r") as file:
+        while True:
+            line = file.readline()
+            if not line: 
+                break 
+            print(line)
+            lists.append(eval(line))
+    lists = lists[1:]
+    lists = np.array(lists, dtype=float)
+    average = np.average(lists,axis=0)
+    average = list(average)
+    print(average)
+    filepath += "_averaged"
+    with open(filepath, "w") as file: 
+        file.write(str(average))
+    
+    
 def plot_directory(directory, epochs, epsilon0):
     x_axis = [i*100 for i in range(1,epochs//100)]
     for filename in os.listdir(directory):

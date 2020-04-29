@@ -20,7 +20,9 @@ def epsilon_greedy_action_selection(values):
 
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
-                "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor))
+                "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
+                "-lq" + str(param.learning_rate_q) + "-lv" + str(param.learning_rate_v) +
+                "-la" + str(param.learning_rate_a))
     model.mlp.save(filepath)
     print("model saved as ", filepath)
     filepath += ".txt"
@@ -29,8 +31,9 @@ def save_model(model):
         
 def usage():
     print("OPTIONS: \n -h --help\n -a --algorithm: random | manual | q-learning",
-           "| qv-learning | qvmax-learning | qva-learning")
-    print(" -e --epsilon \n -y --discountFactor")
+           "| qv-learning | qvmax-learning | qva-learning | qvamax-learning")
+    print(" -e --epsilon: value between 0-1")
+    print(" -y --discountFactor: value between 0-1")
     print(" -t --test: path to model")
 
 def handle_command_line_options(argv):
@@ -47,7 +50,7 @@ def handle_command_line_options(argv):
             sys.exit(2)
         elif option in ("-a", "--algorithm"):
             if value in ("random", "manual", "q-learning", "qv-learning", "qva-learning",
-                         "qvmax-learning"):
+                         "qvmax-learning", "qvamax-learning"):
                 param.algorithm = value 
             else: 
                 usage()
@@ -68,4 +71,5 @@ def show_parameters():
     print("Running program with the following parameters:")
     print("Algorithm:",param.algorithm, "\nEpsilon:",param.epsilon,
           "\nDiscount-factor:",param.discount_factor, 
-          "\nLearning-rate:",param.learning_rate)
+          "\nLearning-rate_q:",param.learning_rate_q, "\t Learning_rate_v:",param.learning_rate_v,
+          "\tLearning-rate-a:",param.learning_rate_a)

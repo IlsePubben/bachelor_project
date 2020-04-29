@@ -30,7 +30,7 @@ def add_points(epoch, points):
         counter = 0
         average = mean(last1000points)
         average_points.append(average)
-        print("Epoch: ", epoch, " average: ", average, "high score: ", max_points)
+        # print("Epoch: ", epoch, " average: ", average, "high score: ", max_points)
         max_points = 0
         
 def plot_multiple_models(filepaths_label, epochs, epsilon0):

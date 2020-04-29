@@ -2,11 +2,10 @@ from keras.models import Sequential
 from keras.optimizers import RMSprop
 from keras.layers.core import Dense, Activation 
 # from keras.layers import LeakyReLU
-import parameters as param
 
 class NeuralNetwork():
     
-    def __init__(self, hidden_nodes, output_nodes):
+    def __init__(self, hidden_nodes, output_nodes, learning_rate):
         self.mlp = Sequential()
         #First hidden layer
         self.mlp.add(Dense(hidden_nodes, input_dim=52, kernel_initializer='lecun_uniform'))
@@ -21,5 +20,5 @@ class NeuralNetwork():
         self.mlp.add(Activation('linear'))
         
         #Compilation 
-        rms = RMSprop(learning_rate=param.learning_rate)
+        rms = RMSprop(learning_rate=learning_rate)
         self.mlp.compile(optimizer=rms, loss='mse')

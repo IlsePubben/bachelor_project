@@ -1,0 +1,258 @@
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
+You are using pip version 9.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+You are using pip version 9.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+You are using pip version 9.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+2020-04-28 16:09:29.537555: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-04-28 16:09:31.146346: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399775000 Hz
+2020-04-28 16:09:31.217575: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4829780 executing computations on platform Host. Devices:
+2020-04-28 16:09:31.217672: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-04-28 16:09:34.711117: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Using TensorFlow backend.
+/home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qvamax-learning 
+Epsilon: 0.3 
+Discount-factor: 0.95 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.004
+Epoch:  100  average:  0.08 high score:  1
+Got stuck  0  times
+Epoch:  200  average:  0.08 high score:  1
+Got stuck  0  times
+Epoch:  300  average:  0.11333333333333333 high score:  2
+Got stuck  0  times
+Epoch:  400  average:  0.135 high score:  2
+Got stuck  0  times
+Epoch:  500  average:  0.172 high score:  3
+Got stuck  0  times
+Epoch:  600  average:  0.18333333333333332 high score:  2
+Got stuck  0  times
+Epoch:  700  average:  0.22714285714285715 high score:  4
+Got stuck  0  times
+Epoch:  800  average:  0.245 high score:  4
+Got stuck  0  times
+Epoch:  900  average:  0.2644444444444444 high score:  2
+Got stuck  0  times
+Epoch:  1000  average:  0.28 high score:  5
+Got stuck  0  times
+Epoch:  1100  average:  0.312 high score:  3
+Got stuck  0  times
+Epoch:  1200  average:  0.337 high score:  2
+Got stuck  0  times
+Epoch:  1300  average:  0.364 high score:  4
+Got stuck  0  times
+Epoch:  1400  average:  0.396 high score:  4
+Got stuck  0  times
+Epoch:  1500  average:  0.416 high score:  4
+Got stuck  0  times
+Epoch:  1600  average:  0.441 high score:  5
+Got stuck  0  times
+Epoch:  1700  average:  0.452 high score:  4
+Got stuck  0  times
+Epoch:  1800  average:  0.465 high score:  4
+Got stuck  0  times
+Epoch:  1900  average:  0.479 high score:  5
+Got stuck  0  times
+Epoch:  2000  average:  0.504 high score:  4
+Got stuck  0  times
+Epoch:  2100  average:  0.527 high score:  3
+Got stuck  0  times
+Epoch:  2200  average:  0.545 high score:  4
+Got stuck  0  times
+Epoch:  2300  average:  0.554 high score:  4
+Got stuck  0  times
+Epoch:  2400  average:  0.577 high score:  6
+Got stuck  0  times
+Epoch:  2500  average:  0.595 high score:  5
+Got stuck  0  times
+Epoch:  2600  average:  0.635 high score:  5
+Got stuck  0  times
+Epoch:  2700  average:  0.663 high score:  5
+Got stuck  0  times
+Epoch:  2800  average:  0.672 high score:  7
+Got stuck  0  times
+Epoch:  2900  average:  0.683 high score:  3
+Got stuck  2  times
+Epoch:  3000  average:  0.718 high score:  9
+Got stuck  1  times
+Epoch:  3100  average:  0.756 high score:  8
+Got stuck  0  times
+Epoch:  3200  average:  0.858 high score:  8
+Got stuck  0  times
+Epoch:  3300  average:  0.956 high score:  10
+Got stuck  0  times
+Epoch:  3400  average:  1.027 high score:  9
+Got stuck  3  times
+Epoch:  3500  average:  1.089 high score:  8
+Got stuck  2  times
+Epoch:  3600  average:  1.152 high score:  10
+Got stuck  2  times
+Epoch:  3700  average:  1.268 high score:  11
+Got stuck  1  times
+Epoch:  3800  average:  1.384 high score:  9
+Got stuck  1  times
+Epoch:  3900  average:  1.539 high score:  12
+Got stuck  2  times
+Epoch:  4000  average:  1.687 high score:  11
+Got stuck  1  times
+Epoch:  4100  average:  1.871 high score:  13
+Got stuck  2  times
+Epoch:  4200  average:  2.149 high score:  16
+Got stuck  1  times
+Epoch:  4300  average:  2.532 high score:  16
+Got stuck  1  times
+Epoch:  4400  average:  2.937 high score:  21
+Got stuck  1  times
+Epoch:  4500  average:  3.495 high score:  21
+Got stuck  1  times
+Epoch:  4600  average:  4.078 high score:  20
+Got stuck  1  times
+Epoch:  4700  average:  4.709 high score:  23
+Got stuck  1  times
+Epoch:  4800  average:  5.491 high score:  21
+Got stuck  0  times
+Epoch:  4900  average:  6.44 high score:  23
+Got stuck  0  times
+Epoch:  5000  average:  7.531 high score:  26
+Got stuck  0  times
+NO LONGER DECREASING EPSILON:  5001 e = -1.671346437984167e-14
+Epoch:  5100  average:  8.627 high score:  24
+Got stuck  0  times
+Epoch:  5200  average:  9.619 high score:  25
+Got stuck  1  times
+Epoch:  5300  average:  10.415 high score:  26
+Got stuck  2  times
+Epoch:  5400  average:  11.279 high score:  25
+Got stuck  0  times
+Epoch:  5500  average:  12.076 high score:  24
+Got stuck  0  times
+Epoch:  5600  average:  12.676 high score:  25
+Got stuck  0  times
+Epoch:  5700  average:  13.352 high score:  28
+Got stuck  0  times
+Epoch:  5800  average:  13.826 high score:  30
+Got stuck  0  times
+Epoch:  5900  average:  14.019 high score:  33
+Got stuck  5  times
+Epoch:  6000  average:  14.106 high score:  29
+Got stuck  0  times
+Epoch:  6100  average:  14.083 high score:  23
+Got stuck  2  times
+Epoch:  6200  average:  14.062 high score:  27
+Got stuck  1  times
+Epoch:  6300  average:  14.049 high score:  23
+Got stuck  0  times
+Epoch:  6400  average:  13.992 high score:  27
+Got stuck  5  times
+Epoch:  6500  average:  13.807 high score:  24
+Got stuck  0  times
+Epoch:  6600  average:  13.848 high score:  28
+Got stuck  2  times
+Epoch:  6700  average:  13.684 high score:  24
+Got stuck  2  times
+Epoch:  6800  average:  13.701 high score:  23
+Got stuck  0  times
+Epoch:  6900  average:  13.684 high score:  25
+Got stuck  2  times
+model saved as  outputs/qvamax-learning7000-e0.3-y0.95-lq0.001-lv0.001-la0.004
+
+
+###############################################################################
+Peregrine Cluster
+Job 11140781 for user 's3152383'
+Finished at: Tue Apr 28 16:46:01 CEST 2020
+
+Job details:
+============
+
+Name                : first_job
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node191
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-04-28T16:08:26
+Start               : 2020-04-28T16:09:14
+End                 : 2020-04-28T16:46:01
+Reserved walltime   : 04:00:00
+Used walltime       : 00:36:47
+Used CPU time       : 00:36:32 (efficiency: 99.36%)
+% User (Computation): 98.61%
+% System (I/O)      :  1.39%
+Mem reserved        : 800M/node
+Max Mem used        : 158.18M (pg-node191)
+Max Disk Write      : 1.14M (pg-node191)
+Max Disk Read       : 23.41M (pg-node191)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################

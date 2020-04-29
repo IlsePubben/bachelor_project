@@ -25,6 +25,7 @@ def save_model(model):
                 "-la" + str(param.learning_rate_a))
     model.mlp.save(filepath)
     print("model saved as ", filepath)
+    print(stats.average_points)
     filepath += ".txt"
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))

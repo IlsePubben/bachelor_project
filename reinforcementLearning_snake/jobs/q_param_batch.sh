@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --time=04:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --job-name=q_different_parameters
+#SBATCH --output=q_different_parameters
+#SBATCH --mem=800
+module load Python/3.6.4-foss-2019a
+module load GCCcore/8.2.0
+pip install --user matplotlib
+pip install --user keras
+pip install --user --upgrade tensorflow
+python ../main.py -a q-learning -e 0.3 -y 0.95
+python ../main.py -a q-learning -e 0.3 -y 0.99
+python ../main.py -a q-learning -e 0.1 -y 0.95
+python ../main.py -a q-learning -e 0.1 -y 0.99

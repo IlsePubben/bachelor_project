@@ -42,13 +42,12 @@ def average_list_file(filepath):
             line = file.readline()
             if not line: 
                 break 
-            print(line)
             lists.append(eval(line))
     lists = lists[1:]
     lists = np.array(lists, dtype=float)
     average = np.average(lists,axis=0)
     average = list(average)
-    print(average)
+    filepath = filepath.replace(".txt", "")
     filepath += "_averaged"
     with open(filepath, "w") as file: 
         file.write(str(average))
@@ -57,11 +56,10 @@ def average_list_file(filepath):
 def plot_directory(directory, epochs, epsilon0):
     x_axis = [i*100 for i in range(1,epochs//100)]
     for filename in os.listdir(directory):
-        if filename.endswith(".txt"):
-            filepath = directory + filename
-            with open(filepath, "r") as file:
-                model = eval(file.readline())
-            plt.plot(x_axis, model, label=filename)
+        filepath = directory + filename
+        with open(filepath, "r") as file:
+            model = eval(file.readline())
+        plt.plot(x_axis, model, label=filename)
     plt.xlabel("Epoch")
     plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
     plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")

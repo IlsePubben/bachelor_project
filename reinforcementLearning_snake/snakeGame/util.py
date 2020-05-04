@@ -68,12 +68,12 @@ def handle_command_line_options(argv):
             param.epsilon = param.start_epsilon
         elif option in ("-y", "--discountFactor"):
             param.discount_factor = float(value)
-        elif option == "lrQ":
-            param.learning_rate_q = value
-        elif option == "lrV":
-            param.learning_rate_v = value
-        elif option == "lrA":
-            param.learning_rate_a = value
+        elif option == "--lrQ":
+            param.learning_rate_q = float(value)
+        elif option == "--lrV":
+            param.learning_rate_v = float(value)
+        elif option == "--lrA":
+            param.learning_rate_a = float(value)
         else:
             usage()
             sys.exit(2)

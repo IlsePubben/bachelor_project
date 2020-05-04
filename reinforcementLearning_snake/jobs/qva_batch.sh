@@ -10,7 +10,8 @@ module load GCCcore/8.2.0
 pip install --user matplotlib
 pip install --user keras
 pip install --user --upgrade tensorflow
-python main.py -a qva-learning -e 0.1 -y 0.99
-python main.py -a qva-learning -e 0.1 -y 0.95
-python main.py -a qva-learning -e 0.3 -y 0.99
-python main.py -a qva-learning -e 0.3 -y 0.95
+for i in {1..5}
+do 
+    python main.py -a qva-learning -e 0.1 -y 0.99 --lrA 0.005
+    python main.py -a qva-learning -e 0.1 -y 0.99 --lrA 0.0002
+done

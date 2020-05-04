@@ -12,6 +12,6 @@ epsilon = start_epsilon
 discount_factor = 0.99
 learning_rate_q = 0.001
 learning_rate_v = learning_rate_q
-learning_rate_a = 0.004
+learning_rate_a = learning_rate_q
 
 algorithm = "" 

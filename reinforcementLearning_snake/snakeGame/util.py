@@ -23,13 +23,12 @@ def save_model(model):
                 "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
                 "-lq" + str(param.learning_rate_q) + "-lv" + str(param.learning_rate_v) +
                 "-la" + str(param.learning_rate_a))
-    model.mlp.save(filepath)
+    # model.mlp.save(filepath)
     print("model saved as ", filepath)
-    print(stats.average_points)
     filepath += ".txt"
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
-        file.write("\n\n")
+        file.write("\n")
         file.close()
         
 def usage():
@@ -38,11 +37,14 @@ def usage():
     print(" -e --epsilon: value between 0-1")
     print(" -y --discountFactor: value between 0-1")
     print(" -t --test: path to model")
+    print(" --lrQ: Learning rate Q_model. default=0.001")
+    print(" --lrV: Learning rate V_model. default=0.001")
+    print(" --lrA: Learning rate A_model. default=0.001")
 
 def handle_command_line_options(argv):
     try: 
         options, args = getopt.getopt(argv, "ha:t:e:y:", ["help", "algorithm=", "test=", "epsilon=",
-                                                          "discountFactor="])
+                                                          "discountFactor=", "lrQ=", "lrV=", "lrA="])
     except getopt.GetoptError as error:
         print(error)
         usage()
@@ -66,6 +68,12 @@ def handle_command_line_options(argv):
             param.epsilon = param.start_epsilon
         elif option in ("-y", "--discountFactor"):
             param.discount_factor = float(value)
+        elif option == "lrQ":
+            param.learning_rate_q = value
+        elif option == "lrV":
+            param.learning_rate_v = value
+        elif option == "lrA":
+            param.learning_rate_a = value
         else:
             usage()
             sys.exit(2)

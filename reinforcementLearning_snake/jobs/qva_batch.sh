@@ -1,10 +1,12 @@
 #!/bin/bash
-#SBATCH --time=08:00:00
+#SBATCH --time=20:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --job-name=qva_learning
 #SBATCH --output=qva_learning
 #SBATCH --mem=800
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=ilse.pubben@gmail.com
 module load Python/3.6.4-foss-2019a
 module load GCCcore/8.2.0
 pip install --user matplotlib

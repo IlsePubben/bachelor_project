@@ -14,6 +14,8 @@ pip install --user keras
 pip install --user --upgrade tensorflow
 for i in {1..5}
 do 
-    python main.py -a qva-learning -e 0.1 -y 0.99 --lrA 0.005
-    python main.py -a qva-learning -e 0.1 -y 0.99 --lrA 0.0002
+    python main.py -a qva-learning -e 0.1 -y 0.99 --lrA 0.001
+    python main.py -a qva-learning -e 0.1 -y 0.99 --lrQ 0.005 --lrV 0.005 --lrA 0.005
+    python main.py -a qva-learning -e 0.1 -y 0.99 --lrQ 0.005 --lrV 0.005 --lrA 0.025
+    python main.py -a qva-learning -e 0.1 -y 0.99 --lrQ 0.005 --lrV 0.005 --lrA 0.001
 done

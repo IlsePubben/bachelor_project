@@ -1,52 +1,51 @@
 Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
 Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
-Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Collecting numpy<2.0,>=1.14.5 (from tensorflow)
-  Downloading https://files.pythonhosted.org/packages/03/27/e35e7c6e6a52fab9fcc64fc2b20c6b516eba930bb02b10ace3b38200d3ab/numpy-1.18.4-cp36-cp36m-manylinux1_x86_64.whl (20.2MB)
-Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
   Ignoring futures: markers 'python_version < "3.2"' don't match your environment
   Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
-Installing collected packages: numpy
-  Found existing installation: numpy 1.18.3
-    Uninstalling numpy-1.18.3:
-      Successfully uninstalled numpy-1.18.3
-Successfully installed numpy-1.18.4
+Requirement already up-to-date: setuptools in /home/s3152383/.local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
+2020-05-04 13:13:58.136344: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 13:13:58.803148: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 13:13:58.870877: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x47d6d20 executing computations on platform Host. Devices:
+2020-05-04 13:13:58.871015: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 13:13:59.293875: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -72,15 +71,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.005
+2020-05-04 13:59:37.036063: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 13:59:37.041328: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 13:59:37.041552: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5251670 executing computations on platform Host. Devices:
+2020-05-04 13:59:37.041589: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 13:59:37.077387: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -106,15 +110,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.0002
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.0002
+2020-05-04 14:43:07.887920: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 14:43:07.893440: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 14:43:07.893824: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3f6b140 executing computations on platform Host. Devices:
+2020-05-04 14:43:07.893863: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 14:43:07.929360: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -140,15 +149,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.005
+2020-05-04 15:27:34.139654: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 15:27:34.144749: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 15:27:34.144995: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x38d6c80 executing computations on platform Host. Devices:
+2020-05-04 15:27:34.145032: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 15:27:34.180714: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -174,15 +188,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.0002
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.0002
+2020-05-04 16:13:58.165852: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 16:13:58.170644: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 16:13:58.170833: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4616390 executing computations on platform Host. Devices:
+2020-05-04 16:13:58.170869: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 16:13:58.205188: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -208,15 +227,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.005
+2020-05-04 16:58:08.699539: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 16:58:08.704561: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 16:58:08.704752: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3afd5d0 executing computations on platform Host. Devices:
+2020-05-04 16:58:08.704788: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 16:58:08.739901: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -242,15 +266,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.0002
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.0002
+2020-05-04 17:43:29.422814: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 17:43:29.427904: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 17:43:29.428115: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x397bd00 executing computations on platform Host. Devices:
+2020-05-04 17:43:29.428152: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 17:43:29.463099: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -276,15 +305,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.005
+2020-05-04 18:28:53.260466: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 18:28:53.265617: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 18:28:53.265859: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55f7300 executing computations on platform Host. Devices:
+2020-05-04 18:28:53.265898: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 18:28:53.301606: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -310,15 +344,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.0002
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.0002
+2020-05-04 19:13:59.472925: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 19:13:59.478306: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 19:13:59.478516: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3d677b0 executing computations on platform Host. Devices:
+2020-05-04 19:13:59.478552: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 19:13:59.513223: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -344,15 +383,20 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.005
+2020-05-04 19:58:38.421196: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-04 19:58:38.426598: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500255000 Hz
+2020-05-04 19:58:38.426793: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4113770 executing computations on platform Host. Devices:
+2020-05-04 19:58:38.426852: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-04 19:58:38.461748: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -378,21 +422,21 @@ Using TensorFlow backend.
   _np_qint32 = np.dtype([("qint32", np.int32, 1)])
 /home/s3152383/.local/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   np_resource = np.dtype([("resource", np.ubyte, 1)])
-OPTIONS: 
- -h --help
- -a --algorithm: random | manual | q-learning | qv-learning | qvmax-learning | qva-learning | qvamax-learning
- -e --epsilon: value between 0-1
- -y --discountFactor: value between 0-1
- -t --test: path to model
- --lrQ: Learning rate Q_model. default=0.001
- --lrV: Learning rate V_model. default=0.001
- --lrA: Learning rate A_model. default=0.001
+WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Discount-factor: 0.99 
+Learning-rate_q: 0.001 	 Learning_rate_v: 0.001 	Learning-rate-a: 0.0002
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.001-lv0.001-la0.0002
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11245288 for user 's3152383'
-Finished at: Mon May  4 12:59:07 CEST 2020
+Job 11245459 for user 's3152383'
+Finished at: Mon May  4 20:42:56 CEST 2020
 
 Job details:
 ============
@@ -402,19 +446,19 @@ User                : s3152383
 Partition           : regular
 Nodes               : pg-node120
 Cores               : 1
-State               : FAILED
-Submit              : 2020-05-04T12:56:21
-Start               : 2020-05-04T12:56:58
-End                 : 2020-05-04T12:59:07
+State               : COMPLETED
+Submit              : 2020-05-04T13:13:22
+Start               : 2020-05-04T13:13:42
+End                 : 2020-05-04T20:42:56
 Reserved walltime   : 20:00:00
-Used walltime       : 00:02:09
-Used CPU time       : 00:00:51 (efficiency: 39.72%)
-% User (Computation): 75.06%
-% System (I/O)      : 24.94%
+Used walltime       : 07:29:14
+Used CPU time       : 07:28:52 (efficiency: 99.92%)
+% User (Computation): 98.60%
+% System (I/O)      :  1.40%
 Mem reserved        : 800M/node
-Max Mem used        : 137.69M (pg-node120)
-Max Disk Write      : 271.46M (pg-node120)
-Max Disk Read       : 502.87M (pg-node120)
+Max Mem used        : 167.39M (pg-node120)
+Max Disk Write      : 2.22M (pg-node120)
+Max Disk Read       : 337.99M (pg-node120)
 
 
 Acknowledgements:

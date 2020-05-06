@@ -1,4 +1,3 @@
-import random
 import numpy as np 
 from snakeGame import util, game
 # from snakeGame import visual_game

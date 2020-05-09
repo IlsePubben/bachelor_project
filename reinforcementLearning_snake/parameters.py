@@ -4,7 +4,7 @@ reward_approach_apple = 0
 reward_avoid_apple = 0
 initial_snake_length = 3
 game_size = 8
-max_epochs = 10000
+max_epochs = 7000
 
 start_epsilon = 0.1
 final_epsilon = 0

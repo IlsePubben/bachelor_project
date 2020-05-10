@@ -160,10 +160,10 @@ def qva_learning(timestep, q_model, v_model, a_model):
     global epoch
     global game_state
     global got_stuck
-    global v_value
+    # global v_value
     
-    if epoch == 0: 
-        v_value = v_model.mlp.predict(state.reshape(1,52), batch_size=1)
+    # if epoch == 0: 
+    v_value = v_model.mlp.predict(state.reshape(1,52), batch_size=1)
     q_values = q_model.mlp.predict(state.reshape(1,52), batch_size=1)
     a_values = a_model.mlp.predict(state.reshape(1,52), batch_size=1)
     
@@ -186,7 +186,7 @@ def qva_learning(timestep, q_model, v_model, a_model):
     a_model.mlp.fit(state.reshape(1,52), a_target, batch_size=1, verbose=0)
     
     state = new_state 
-    v_value = new_vValue
+    # v_value = new_vValue
     
     if game_state.time_stuck > param.game_size**2:
         got_stuck += 1

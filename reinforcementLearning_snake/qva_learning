@@ -1,51 +1,61 @@
 Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
-Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
 Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
   Ignoring futures: markers 'python_version < "3.2"' don't match your environment
   Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
 Requirement already up-to-date: setuptools in /home/s3152383/.local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow)
-Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
 Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Collecting markdown>=2.6.8 (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+  Downloading https://files.pythonhosted.org/packages/a4/63/eaec2bd025ab48c754b55e8819af0f6a69e2b1e187611dd40cbbe101ee7f/Markdown-3.2.2-py3-none-any.whl (88kB)
+Collecting importlib-metadata; python_version < "3.8" (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+  Downloading https://files.pythonhosted.org/packages/ad/e4/891bfcaf868ccabc619942f27940c77a8a4b45fd8367098955bb7e152fb1/importlib_metadata-1.6.0-py2.py3-none-any.whl
+Collecting zipp>=0.5 (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+  Downloading https://files.pythonhosted.org/packages/b2/34/bfcb43cc0ba81f527bc4f40ef41ba2ff4080e047acb0586b56b3d017ace4/zipp-3.1.0-py3-none-any.whl
+Installing collected packages: zipp, importlib-metadata, markdown
+  Found existing installation: Markdown 3.2.1
+    Uninstalling Markdown-3.2.1:
+      Successfully uninstalled Markdown-3.2.1
+Successfully installed importlib-metadata-1.6.0 markdown-3.2.2 zipp-3.1.0
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
-2020-05-08 11:31:28.253019: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 11:31:31.078559: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 11:31:31.305772: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x504a600 executing computations on platform Host. Devices:
-2020-05-08 11:31:31.305893: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 11:31:34.074973: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-09 12:15:25.594046: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 12:15:26.493362: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 12:15:26.526654: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5408970 executing computations on platform Host. Devices:
+2020-05-09 12:15:26.526800: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 12:15:26.995978: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -77,14 +87,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
-2020-05-08 12:34:20.017058: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 12:34:20.022365: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 12:34:20.022577: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4333c30 executing computations on platform Host. Devices:
-2020-05-08 12:34:20.022616: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 12:34:20.057177: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0001
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0001
+2020-05-09 12:45:18.947661: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 12:45:18.952733: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 12:45:18.952965: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4bc4a10 executing computations on platform Host. Devices:
+2020-05-09 12:45:18.953006: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 12:45:18.987881: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -116,14 +126,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0025
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0025
-2020-05-08 13:35:35.757700: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 13:35:35.762565: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 13:35:35.762746: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x568c300 executing computations on platform Host. Devices:
-2020-05-08 13:35:35.762784: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 13:35:35.796424: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0005
+2020-05-09 13:32:46.677945: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 13:32:46.683711: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 13:32:46.683962: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3e11ab0 executing computations on platform Host. Devices:
+2020-05-09 13:32:46.684005: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 13:32:46.720669: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -155,14 +165,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0001
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0001
-2020-05-08 14:34:33.623669: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 14:34:33.629242: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 14:34:33.629632: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49dc710 executing computations on platform Host. Devices:
-2020-05-08 14:34:33.629674: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 14:34:33.665400: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 2e-05
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la2e-05
+2020-05-09 13:50:13.452398: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 13:50:13.457860: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 13:50:13.458241: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x528fd70 executing computations on platform Host. Devices:
+2020-05-09 13:50:13.458287: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 13:50:13.493090: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -194,14 +204,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
-2020-05-08 15:33:23.976640: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 15:33:23.981788: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 15:33:23.982014: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x542ad50 executing computations on platform Host. Devices:
-2020-05-08 15:33:23.982052: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 15:33:24.017875: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0001
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0001
+2020-05-09 14:36:43.162085: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 14:36:43.167378: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 14:36:43.167623: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x46ccd20 executing computations on platform Host. Devices:
+2020-05-09 14:36:43.167661: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 14:36:43.203839: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -233,14 +243,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0025
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0025
-2020-05-08 16:35:46.637239: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 16:35:46.642209: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 16:35:46.642427: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4f16050 executing computations on platform Host. Devices:
-2020-05-08 16:35:46.642464: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 16:35:46.677290: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0005
+2020-05-09 14:56:34.408397: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 14:56:34.413881: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 14:56:34.414137: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3b795f0 executing computations on platform Host. Devices:
+2020-05-09 14:56:34.414175: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 14:56:34.449570: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -272,14 +282,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0001
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0001
-2020-05-08 17:32:04.199998: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 17:32:04.205242: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 17:32:04.205435: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x51d0610 executing computations on platform Host. Devices:
-2020-05-08 17:32:04.205472: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 17:32:04.239442: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 2e-05
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la2e-05
+2020-05-09 15:00:53.849523: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 15:00:53.854670: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 15:00:53.854905: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x44f0760 executing computations on platform Host. Devices:
+2020-05-09 15:00:53.854941: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 15:00:53.890064: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -311,14 +321,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
-2020-05-08 18:33:12.093965: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 18:33:12.099461: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 18:33:12.099703: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x492a5c0 executing computations on platform Host. Devices:
-2020-05-08 18:33:12.099743: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 18:33:12.138203: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0001
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0001
+2020-05-09 15:17:05.609193: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 15:17:05.614818: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 15:17:05.615068: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3abdb70 executing computations on platform Host. Devices:
+2020-05-09 15:17:05.615108: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 15:17:05.650849: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -350,14 +360,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0025
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0025
-2020-05-08 19:36:57.736597: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 19:36:57.872681: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 19:36:57.873094: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x44dd290 executing computations on platform Host. Devices:
-2020-05-08 19:36:57.873160: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 19:36:57.930393: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0005
+2020-05-09 15:23:24.831767: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 15:23:24.837041: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 15:23:24.837294: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4980950 executing computations on platform Host. Devices:
+2020-05-09 15:23:24.837334: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 15:23:24.873043: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -389,14 +399,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0001
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0001
-2020-05-08 20:36:56.300035: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 20:36:56.306073: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 20:36:56.306266: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4442360 executing computations on platform Host. Devices:
-2020-05-08 20:36:56.306319: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 20:36:56.347155: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 2e-05
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la2e-05
+2020-05-09 15:47:52.081631: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 15:47:52.086970: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 15:47:52.087209: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5281270 executing computations on platform Host. Devices:
+2020-05-09 15:47:52.087246: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 15:47:52.123667: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -428,14 +438,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
-2020-05-08 21:45:12.444526: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 21:45:12.450435: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 21:45:12.450673: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x40c7ca0 executing computations on platform Host. Devices:
-2020-05-08 21:45:12.450711: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 21:45:12.489114: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0001
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0001
+2020-05-09 15:52:01.710985: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 15:52:01.716723: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 15:52:01.717118: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x426eea0 executing computations on platform Host. Devices:
+2020-05-09 15:52:01.717159: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 15:52:01.752897: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -467,14 +477,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0025
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0025
-2020-05-08 23:02:10.737463: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-08 23:02:10.743409: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-08 23:02:10.743698: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3dbc5b0 executing computations on platform Host. Devices:
-2020-05-08 23:02:10.743738: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-08 23:02:10.817368: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0005
+2020-05-09 16:39:05.157268: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 16:39:05.162415: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 16:39:05.162658: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x48cf190 executing computations on platform Host. Devices:
+2020-05-09 16:39:05.162696: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 16:39:05.198735: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -506,14 +516,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0001
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0001
-2020-05-09 00:16:34.780350: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-09 00:16:34.786642: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-09 00:16:34.786874: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x468c980 executing computations on platform Host. Devices:
-2020-05-09 00:16:34.786918: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-09 00:16:34.825037: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 2e-05
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la2e-05
+2020-05-09 16:57:11.051075: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 16:57:11.056761: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 16:57:11.057152: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4617d30 executing computations on platform Host. Devices:
+2020-05-09 16:57:11.057197: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 16:57:11.092750: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -545,14 +555,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
-2020-05-09 01:28:13.289139: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-09 01:28:13.294812: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-09 01:28:13.295176: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x490a6d0 executing computations on platform Host. Devices:
-2020-05-09 01:28:13.295217: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-09 01:28:13.331671: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0001
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0001
+2020-05-09 17:24:05.571942: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 17:24:05.577462: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 17:24:05.577704: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x43a8a40 executing computations on platform Host. Devices:
+2020-05-09 17:24:05.577744: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 17:24:05.612965: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -584,14 +594,14 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0025
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0025
-2020-05-09 02:44:14.326610: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-09 02:44:14.332801: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500155000 Hz
-2020-05-09 02:44:14.333029: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4821420 executing computations on platform Host. Devices:
-2020-05-09 02:44:14.333069: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-09 02:44:14.372560: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 0.0005
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la0.0005
+2020-05-09 18:04:49.026854: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-09 18:04:49.032398: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500005000 Hz
+2020-05-09 18:04:49.032640: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4e766f0 executing computations on platform Host. Devices:
+2020-05-09 18:04:49.032678: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-09 18:04:49.067950: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -623,15 +633,15 @@ Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0001
-NO LONGER DECREASING EPSILON:  8002 e = -1.2499999991020608e-05
-model saved as  outputs/qva-learning10000-e0.1-y0.99-lq0.0005-lv0.0005-la0.0001
+Learning-rate_q: 0.0001 	 Learning_rate_v: 0.0001 	Learning-rate-a: 2e-05
+NO LONGER DECREASING EPSILON:  5001 e = -9.261207523526133e-15
+model saved as  outputs/qva-learning7000-e0.1-y0.99-lq0.0001-lv0.0001-la2e-05
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11331103 for user 's3152383'
-Finished at: Sat May  9 03:51:30 CEST 2020
+Job 11345466 for user 's3152383'
+Finished at: Sat May  9 18:08:57 CEST 2020
 
 Job details:
 ============
@@ -639,21 +649,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node032
+Nodes               : pg-node074
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-08T11:27:35
-Start               : 2020-05-08T11:27:45
-End                 : 2020-05-09T03:51:29
+Submit              : 2020-05-09T12:12:46
+Start               : 2020-05-09T12:13:18
+End                 : 2020-05-09T18:08:57
 Reserved walltime   : 20:00:00
-Used walltime       : 16:23:44
-Used CPU time       : 16:13:55 (efficiency: 99.00%)
-% User (Computation): 98.62%
-% System (I/O)      :  1.38%
+Used walltime       : 05:55:39
+Used CPU time       : 05:53:31 (efficiency: 99.40%)
+% User (Computation): 98.65%
+% System (I/O)      :  1.35%
 Mem reserved        : 800M/node
-Max Mem used        : 166.03M (pg-node032)
-Max Disk Write      : 2.88M (pg-node032)
-Max Disk Read       : 512.87M (pg-node032)
+Max Mem used        : 162.19M (pg-node074)
+Max Disk Write      : 4.71M (pg-node074)
+Max Disk Read       : 515.72M (pg-node074)
 
 
 Acknowledgements:

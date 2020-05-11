@@ -20,6 +20,7 @@ def epsilon_greedy_action_selection(values):
 
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
+                "-v" + str(param.vision_size) +
                 "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
                 "-lq" + str(param.learning_rate_q) + "-lv" + str(param.learning_rate_v) +
                 "-la" + str(param.learning_rate_a))
@@ -36,6 +37,7 @@ def usage():
            "| qv-learning | qvmax-learning | qva-learning | qvamax-learning")
     print(" -e --epsilon: value between 0-1")
     print(" -y --discountFactor: value between 0-1")
+    print(" -v --visionSize: size of vision grid")
     print(" -t --test: path to model")
     print(" --lrQ: Learning rate Q_model. default=0.001")
     print(" --lrV: Learning rate V_model. default=0.001")
@@ -43,8 +45,8 @@ def usage():
 
 def handle_command_line_options(argv):
     try: 
-        options, args = getopt.getopt(argv, "ha:t:e:y:", ["help", "algorithm=", "test=", "epsilon=",
-                                                          "discountFactor=", "lrQ=", "lrV=", "lrA="])
+        options, args = getopt.getopt(argv, "ha:t:e:y:v:", ["help", "algorithm=", "test=", "epsilon=",
+                                                          "discountFactor=", "visionSize=", "lrQ=", "lrV=", "lrA="])
     except getopt.GetoptError as error:
         print(error)
         usage()
@@ -68,6 +70,8 @@ def handle_command_line_options(argv):
             param.epsilon = param.start_epsilon
         elif option in ("-y", "--discountFactor"):
             param.discount_factor = float(value)
+        elif option in ("-v", "--visionSize"):
+            param.vision_size = int(value) 
         elif option == "--lrQ":
             param.learning_rate_q = float(value)
         elif option == "--lrV":
@@ -81,6 +85,7 @@ def handle_command_line_options(argv):
 def show_parameters():
     print("Running program with the following parameters:")
     print("Algorithm:",param.algorithm, "\nEpsilon:",param.epsilon,
+          "\nVisiongrid size:",param.vision_size,
           "\nDiscount-factor:",param.discount_factor, 
           "\nLearning-rate_q:",param.learning_rate_q, "\t Learning_rate_v:",param.learning_rate_v,
           "\tLearning-rate-a:",param.learning_rate_a)

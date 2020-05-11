@@ -1,30 +1,6 @@
 import numpy
 import parameters as param
 from snakeGame import util 
-from enum import IntEnum
-
-snake_head = numpy.array([0.9,0.1,0.1])
-snake_tail = numpy.array([0.1,0.9,0.1])
-apple = numpy.array([0.1,0.1,0.9])
-empty = numpy.array([0.1,0.1,0.1])
-
-# class Snake_vision(IntEnum):
-#     UP = 0
-#     RIGHT = 1
-#     LEFT = 2
-#     DOWN = 3
-#     NORTH = 4
-#     EAST = 5
-#     SOUTH = 6
-#     WEST = 7
-    
-# class Snake_vision(IntEnum):
-#     UP = 0
-#     RIGHT = 1
-#     LEFT = 2
-#     DOWN = 3
-#     APPLEDX = 4
-#     APPLEDY = 5
 
 class Game():
     
@@ -47,7 +23,7 @@ class Game():
           
     def make_move(self, action):
         self.tail_locations.append(self.head_location)
-        new_state = numpy.zeros(2*5**2+2)
+        new_state = numpy.zeros(2 * param.vision_size**2 + 2)
         # new_state = numpy.zeros(6)
         reward = 0
         
@@ -74,7 +50,7 @@ class Game():
             reward = param.reward_dead
         
         self.update_state(new_state)
-        # print(new_state, '\n')
+        # self.display_state(new_state)
         
         self.time_stuck += 1
         return new_state, reward
@@ -105,19 +81,20 @@ class Game():
     #     # elif self.apple_location[1] < self.head_location[1]:
     #     #     state[Snake_vision.WEST] = 1
     
-    #with 5x5 vision grid
+    #with vision grid
     def update_state(self, state):
         idx = 0
-        for i in range(-2,3):
-            for j in range(-2,3):
+        offset = param.vision_size // 2
+        for i in range(-offset, offset + 1):
+            for j in range(-offset, offset + 1):
                 location = (self.head_location[0] + i, self.head_location[1] + j)
                 if (not self.valid_location(location)
                     and not (i==0 and j==0)):
                     state[idx] = 1
                 elif (location == self.apple_location):
-                    state[idx+25] = 1
+                    state[idx+param.vision_size**2] = 1
                 idx += 1
-                # print(idx)
+    
 
         state[len(state) - 1] = (self.apple_location[1] - self.head_location[1]) / param.game_size * 2
         state[len(state) - 2] = (self.apple_location[0] - self.head_location[0]) / param.game_size * 2               
@@ -126,7 +103,7 @@ class Game():
     def get_state(self):
         # state = numpy.zeros(8)
         # state = numpy.zeros(6)
-        state = numpy.zeros(2*5**2+2)
+        state = numpy.zeros(2*param.vision_size**2+2)
         self.update_state(state)
         return state
     
@@ -145,6 +122,17 @@ class Game():
     #         for location in self.tail_locations:
     #             if not util.out_of_bounds(location):
     #                 state[location] = snake_tail
+    
+    def display_state(self, state):
+        obstacles = numpy.zeros((param.vision_size, param.vision_size))
+        apple = numpy.zeros((param.vision_size, param.vision_size))
+        for row in range(0,param.vision_size):
+            for col in range(0,param.vision_size): 
+                obstacles[row][col] = state[row*param.vision_size + col]
+                apple[row][col] = state[param.vision_size**2 + row*param.vision_size + col]
+        print("obstacles\n",obstacles)
+        print("apple\n",apple)
+        print("distance to apple ", state[len(state) -1], state[len(state)-1])
     
     def display_game(self): 
         grid = numpy.zeros((param.game_size,param.game_size),dtype=str)

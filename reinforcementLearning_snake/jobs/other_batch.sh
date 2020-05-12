@@ -7,14 +7,15 @@
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ilse.pubben@gmail.com
+#SBATCH --array=0-3
+
 module load Python/3.6.4-foss-2019a
 module load GCCcore/8.2.0
 pip install --user matplotlib
 pip install --user keras
 pip install --user --upgrade tensorflow
-for i in {1..1}
-do 
-    python main.py -a q-learning -e 0.1 -y 0.99 --lrQ 0.005 --lrV 0.005 -v 5
-    python main.py -a qv-learning -e 0.1 -y 0.99 --lrQ 0.0005 --lrV 0.0005 -v 5
-    python main.py -a qva-learning -e 0.1 -y 0.99 --lrQ 0.0005 --lrV 0.0005 -v 5
-done
+
+algorithm=(q-learning qv-learning qva-learning)
+lr=(0.005 0.0005 0.0005)
+
+python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}]} -e 0.1 -y 0.99 --lrQ ${lr[${SLURM_ARRAY_TASK_ID}]} --lrV ${lr[${SLURM_ARRAY_TASK_ID}]} --lrA ${lr[${SLURM_ARRAY_TASK_ID}]} -v 5

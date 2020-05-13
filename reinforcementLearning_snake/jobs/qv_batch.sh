@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --time=20:00:00
+#SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --job-name=q_learning
-#SBATCH --output=q_learning
+#SBATCH --job-name=qv_batch 
+#SBATCH --output=qv_batch
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ilse.pubben@gmail.com
@@ -14,4 +14,4 @@ pip install --user matplotlib
 pip install --user keras
 pip install --user --upgrade tensorflow
 
-python main.py -a q-learning -e 0.1 -y 0.99 --lrQ 0.005 --lrV 0.005 --lrA 0.005 -v 5
+python main.py -a qv-learning -e 0.1 -y 0.99 --lrQ 0.0005 --lrV 0.0005 --lrA 0.0005 -v 5

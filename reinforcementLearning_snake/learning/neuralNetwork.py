@@ -23,3 +23,4 @@ class NeuralNetwork():
         #Compilation 
         rms = RMSprop(learning_rate=learning_rate)
         self.mlp.compile(optimizer=rms, loss='mse')
+    

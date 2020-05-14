@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=20:00:00
+#SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --job-name=qva_learning
@@ -14,4 +14,4 @@ pip install --user matplotlib
 pip install --user keras
 pip install --user --upgrade tensorflow
 
-python main.py -a qva-learning -e 0.1 -y 0.99 --lrQ 0.0005 --lrV 0.0005 --lrA 0.0005 -v 7
+python main.py -a qva-learning -e 0.1 -y 0.99 -v 5

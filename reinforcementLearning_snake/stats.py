@@ -51,7 +51,11 @@ def average_list_file(filepath):
     filepath += "_averaged"
     with open(filepath, "w") as file: 
         file.write(str(average))
-    
+
+def average_directory(directory):
+    for filename in os.listdir(directory):
+        filepath = directory + filename
+        average_list_file(filepath)
     
 def plot_directory(directory, epochs, epsilon0):
     x_axis = [i*100 for i in range(1,epochs//100)]
@@ -66,15 +70,3 @@ def plot_directory(directory, epochs, epsilon0):
     plt.legend()
     plt.show()
  
-def plot_multiple_models(filepaths_label, epochs, epsilon0):
-    x_axis = [i*100 for i in range(1,epochs//100)]
-    for key in filepaths_label: 
-        with open(key, "r") as file: 
-            model = eval(file.readline())
-        plt.plot(x_axis,model, label=filepaths_label[key] )
-  
-    plt.xlabel("Epoch")
-    plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
-    plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")
-    plt.legend()
-    plt.show()

@@ -15,21 +15,21 @@ if __name__ == '__main__':
         # performed as often as possible 
         # visual_game.pyglet.clock.schedule(algorithms.q_learning)
         model = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_q)
-        while algorithms.epoch < param.max_epochs:
+        while param.epoch < param.max_epochs:
             algorithms.q_learning(1,model)
         util.save_model(model)
 
     elif param.algorithm == 'qv-learning':
         vmodel = neuralNetwork.NeuralNetwork(100,1, param.learning_rate_v)
         qmodel = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_q)
-        while algorithms.epoch < param.max_epochs:
+        while param.epoch < param.max_epochs:
             algorithms.qv_learning(1,qmodel,vmodel)
         util.save_model(qmodel)
     
     elif param.algorithm == 'qvmax-learning':
         vmodel = neuralNetwork.NeuralNetwork(100,1, param.learning_rate_v)
         qmodel = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_q)
-        while algorithms.epoch < param.max_epochs:
+        while param.epoch < param.max_epochs:
             algorithms.qvmax_learning(1,qmodel,vmodel)
         util.save_model(qmodel)
         
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         qmodel = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_q)
         vmodel = neuralNetwork.NeuralNetwork(100,1, param.learning_rate_v)
         amodel = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_a)
-        while algorithms.epoch < param.max_epochs:
+        while param.epoch < param.max_epochs:
             algorithms.qva_learning(1,qmodel,vmodel,amodel)
         util.save_model(amodel)
     
@@ -45,7 +45,7 @@ if __name__ == '__main__':
         qmodel = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_q)
         vmodel = neuralNetwork.NeuralNetwork(100,1, param.learning_rate_v)
         amodel = neuralNetwork.NeuralNetwork(100,4, param.learning_rate_a)
-        while algorithms.epoch < param.max_epochs:
+        while param.epoch < param.max_epochs:
             algorithms.qvamax_learning(1,qmodel,vmodel,amodel)
         util.save_model(amodel)
 

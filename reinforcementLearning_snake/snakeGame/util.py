@@ -18,12 +18,16 @@ def epsilon_greedy_action_selection(values):
     else: 
         return np.argmax(values) #choose best action 
 
+#a scheduler needs to accept these parameters but we're not using them
+def annealing_learningrate(e,lr): 
+    # print("learning rate:", param.lr_annealing_factor**param.epoch * param.lr_start, e )
+    return param.lr_annealing_factor**param.epoch * param.lr_start
+
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
                 "-v" + str(param.vision_size) +
                 "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
-                "-lq" + str(param.learning_rate_q) + "-lv" + str(param.learning_rate_v) +
-                "-la" + str(param.learning_rate_a))
+                "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end))
     # model.mlp.save(filepath)
     print("model saved as ", filepath)
     filepath += ".txt"
@@ -39,9 +43,9 @@ def usage():
     print(" -y --discountFactor: value between 0-1")
     print(" -v --visionSize: size of vision grid")
     print(" -t --test: path to model")
-    print(" --lrQ: Learning rate Q_model. default=0.001")
-    print(" --lrV: Learning rate V_model. default=0.001")
-    print(" --lrA: Learning rate A_model. default=0.001")
+    # print(" --lrQ: Learning rate Q_model. default=0.001")
+    # print(" --lrV: Learning rate V_model. default=0.001")
+    # print(" --lrA: Learning rate A_model. default=0.001")
 
 def handle_command_line_options(argv):
     try: 
@@ -87,5 +91,5 @@ def show_parameters():
     print("Algorithm:",param.algorithm, "\nEpsilon:",param.epsilon,
           "\nVisiongrid size:",param.vision_size,
           "\nDiscount-factor:",param.discount_factor, 
-          "\nLearning-rate_q:",param.learning_rate_q, "\t Learning_rate_v:",param.learning_rate_v,
-          "\tLearning-rate-a:",param.learning_rate_a)
+          "\nLearning rate start:", param.lr_start,
+          "\nLearning rate end:", param.lr_end)

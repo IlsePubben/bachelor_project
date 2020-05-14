@@ -2,9 +2,9 @@ import numpy as np
 from snakeGame import util, game
 # from snakeGame import visual_game
 import parameters as param
+from keras.callbacks import LearningRateScheduler
 import stats
 
-epoch = 0
 game_state = game.Game()
 state = game_state.get_state()
 
@@ -13,9 +13,10 @@ got_stuck = 0
 v_value = 0 #to speed up qv(a)-learning
 q_values = np.zeros((1,4)) #to speed up qvmax-learniing
 
+callback = [LearningRateScheduler(util.annealing_learningrate)]
+
 tmp = True
-def q_learning(timestep, model):
-    global epoch 
+def q_learning(timestep, model): 
     global game_state
     global state 
     global got_stuck
@@ -23,10 +24,11 @@ def q_learning(timestep, model):
     #toggle for visualisation 
     # visual_game.visualize(game_state)
     
-    if (epoch == 0): 
+    if (param.epoch == 0): 
         state = game_state.get_state()
-        epoch += 1
-
+        param.epoch += 1
+    
+    print(param.epoch)
     qValues = model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     
     action = util.epsilon_greedy_action_selection(qValues)
@@ -42,7 +44,8 @@ def q_learning(timestep, model):
     
     target_output = qValues 
     target_output[0][action] = update
-    model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2),target_output,batch_size=1,verbose=0)
+    
+    model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2),target_output,batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
     if game_state.time_stuck > param.game_size**2:
@@ -50,18 +53,17 @@ def q_learning(timestep, model):
         on_death()
     
     #toggle for visualisation 
-    # if epoch >= param.max_epochs:
+    # if param.epoch >= param.max_epochs:
         # visual_game.end_visualization()
     
 def qv_learning(timestep, q_model, v_model):
     global state
-    global epoch
     global game_state
     global got_stuck
     
-    if (epoch == 0): 
+    if (param.epoch == 0): 
         state = game_state.get_state()
-        epoch += 1
+        param.epoch += 1
     
     q_values = q_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     action = util.epsilon_greedy_action_selection(q_values)
@@ -77,8 +79,8 @@ def qv_learning(timestep, q_model, v_model):
     target_output = q_values
     target_output[0][action] = update 
 
-    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1,verbose=0)
-    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, verbose=0)
+    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1, epochs=1, callbacks=callback, verbose=0)
+    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
     if game_state.time_stuck > param.game_size**2:
@@ -87,14 +89,13 @@ def qv_learning(timestep, q_model, v_model):
 
 def qva_learning(timestep, q_model, v_model, a_model):
     global state
-    global epoch
     global game_state
     global got_stuck
     # global v_value
     
-    if (epoch == 0): 
+    if (param.epoch == 0): 
         state = game_state.get_state()
-        epoch += 1
+        param.epoch += 1
         
     v_value = v_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     q_values = q_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
@@ -114,9 +115,9 @@ def qva_learning(timestep, q_model, v_model, a_model):
     q_target[0][action] = update 
     a_target = q_values - v_value
         
-    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1,verbose=0)
-    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), q_target, batch_size=1, verbose=0)
-    a_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), a_target, batch_size=1, verbose=0)
+    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1, epochs=1, callbacks=callback, verbose=0)
+    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), q_target, batch_size=1, epochs=1, callbacks=callback, verbose=0)
+    a_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), a_target, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     
     state = new_state 
     # v_value = new_vValue
@@ -127,12 +128,11 @@ def qva_learning(timestep, q_model, v_model, a_model):
 
 def qvmax_learning(timestep, q_model, v_model):
     global state
-    global epoch
     global game_state
     global got_stuck
     global q_values
     
-    if epoch == 0:
+    if param.epoch == 0:
         q_values = q_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     action = util.epsilon_greedy_action_selection(q_values)
     
@@ -150,8 +150,8 @@ def qvmax_learning(timestep, q_model, v_model):
     target_output = q_values
     target_output[0][action] = q_update 
 
-    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), v_update, batch_size=1,verbose=0)
-    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, verbose=0)
+    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), v_update, batch_size=1, epochs=1, callbacks=callback, verbose=0)
+    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     q_values = new_qValues
     
@@ -162,13 +162,12 @@ def qvmax_learning(timestep, q_model, v_model):
 
 def qvamax_learning(timestep, q_model, v_model, a_model):
     global state
-    global epoch
     global game_state
     global got_stuck
     global v_value
     global q_values
     
-    if epoch == 0: 
+    if param.epoch == 0: 
         v_value = v_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
         q_values = q_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     a_values = a_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
@@ -190,9 +189,9 @@ def qvamax_learning(timestep, q_model, v_model, a_model):
     q_target[0][action] = q_update 
     a_target = q_values - v_value
         
-    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), v_update, batch_size=1,verbose=0)
-    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), q_target, batch_size=1, verbose=0)
-    a_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), a_target, batch_size=1, verbose=0)
+    v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), v_update, batch_size=1, epochs=1, callbacks=callback, verbose=0)
+    q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), q_target, batch_size=1, epochs=1, callbacks=callback, verbose=0)
+    a_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), a_target, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     
     state = new_state 
     v_value = new_vValue
@@ -215,7 +214,7 @@ def qvamax_learning(timestep, q_model, v_model, a_model):
 #     if reward == param.reward_dead: 
 #         on_death()
         
-#     if epoch > numGames:
+#     if param.epoch > numGames:
 #         visual_game.end_visualization()
 
 #     if game_state.time_stuck > param.game_size**2:
@@ -228,14 +227,14 @@ def qvamax_learning(timestep, q_model, v_model, a_model):
     
 #     visual_game.visualize(game_state,action)
 
-def on_death():
-    global epoch 
+def on_death(): 
     global game_state
     global got_stuck
+    global callback 
     
-    stats.add_points(epoch, game_state.points)
+    stats.add_points(param.epoch, game_state.points)
     
-    if epoch % 100 == 0:
+    if param.epoch % 100 == 0:
         # print("Got stuck ", got_stuck, " times")
         got_stuck = 0
     
@@ -243,20 +242,19 @@ def on_death():
     if param.epsilon > param.final_epsilon:
         param.epsilon -= (param.start_epsilon/(param.max_epochs-2000))
     elif tmp: 
-        print("NO LONGER DECREASING EPSILON: ", epoch, "e =", param.epsilon) 
+        print("NO LONGER DECREASING EPSILON: ", param.epoch, "e =", param.epsilon) 
         tmp = False
-    epoch += 1
+    param.epoch += 1
     game_state = game.Game()
-    # visual_game.reset(epoch)
+    # visual_game.reset(param.epoch)
 
-# def random_actions(timestep):
-#     global epoch 
+# def random_actions(timestep): 
 #     global game_state
 #     #initialize game
-#     if epoch == 0:
+#     if param.epoch == 0:
 #         print("start game")
-#         epoch += 1
-#     if epoch >= param.max_epochs:
+#         param.epoch += 1
+#     if param.epoch >= param.max_epochs:
 #         visual_game.end_visualization()
 #         # game_state = game.Game()
 #     action = random.choice(util.actions)
@@ -264,18 +262,17 @@ def on_death():
 #     game_state.display_game() 
 #     state, reward = game_state.make_move(action)
 #     if reward == param.reward_dead:
-#         epoch += 1
-#         visual_game.reset(epoch)
+#         param.epoch += 1
+#         visual_game.reset(param.epoch)
 #         game_state = game.Game()
     
-# def manual(timestep):
-#     global epoch 
+# def manual(timestep): 
 #     global game_state
 #     #initialize game
-#     if epoch == 0:
+#     if param.epoch == 0:
 #         print("start game")
-#         epoch += 1
-#     if epoch >= param.max_epochs:
+#         param.epoch += 1
+#     if param.epoch >= param.max_epochs:
 #         visual_game.end_visualization()
 #         # game_state = game.Game()
 #     key = input()
@@ -294,6 +291,6 @@ def on_death():
 #     # game_state.display_game() 
 #     state, reward = game_state.make_move(action)
 #     if reward == param.reward_dead:
-#         epoch += 1
-#         visual_game.reset(epoch)
+#         param.epoch += 1
+#         visual_game.reset(param.epoch)
 #         game_state = game.Game()

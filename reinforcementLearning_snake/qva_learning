@@ -1,52 +1,187 @@
 Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
+Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
+Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
 Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
 Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
+Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
+Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
 Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
-Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: matplotlib in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
-Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
-Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
-Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
-Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: kiwisolver>=1.0.1 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: cycler>=0.10 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
-Requirement already satisfied: python-dateutil>=2.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/python_dateutil-2.6.1-py3.6.egg (from matplotlib)
-Requirement already satisfied: numpy>=1.11 in /home/s3152383/.local/lib/python3.6/site-packages (from matplotlib)
-Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
-Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pyparsing-2.2.0-py3.6.egg (from matplotlib)
-Requirement already satisfied: six>=1.5 in /home/s3152383/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib)
-Requirement already satisfied: six in /home/s3152383/.local/lib/python3.6/site-packages (from cycler>=0.10->matplotlib)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
+Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 You are using pip version 9.0.1, however version 20.1 is available.
@@ -54,225 +189,420 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
-Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
-Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
-Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already satisfied: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
 Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already satisfied: six>=1.9.0 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already satisfied: pyyaml in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: scipy>=0.14 in /apps/haswell/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/scipy-1.0.0-py3.6-linux-x86_64.egg (from keras)
-Requirement already satisfied: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already satisfied: numpy>=1.9.1 in /home/s3152383/.local/lib/python3.6/site-packages (from keras)
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-You are using pip version 9.0.1, however version 20.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-You are using pip version 9.0.1, however version 20.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
-You are using pip version 9.0.1, however version 20.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
-You are using pip version 9.0.1, however version 20.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
   Ignoring futures: markers 'python_version < "3.2"' don't match your environment
   Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
-Requirement already up-to-date: tensorflow in /home/s3152383/.local/lib/python3.6/site-packages
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
 Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow)
+Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+  Using cached https://files.pythonhosted.org/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
 Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
 Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
-Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-You are using pip version 9.0.1, however version 20.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
-  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
-  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
-  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: grpcio>=1.8.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-  Ignoring futures: markers 'python_version < "3.2"' don't match your environment
-  Ignoring enum34: markers 'python_version < "3.4"' don't match your environment
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: astor>=0.6.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: protobuf>=3.6.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: tensorflow-estimator<1.15.0rc0,>=1.14.0rc0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
-Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
-Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: tensorboard<1.15.0,>=1.14.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: gast>=0.2.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-applications>=1.0.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: keras-preprocessing>=1.0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: numpy<2.0,>=1.14.5 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: termcolor>=1.1.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: absl-py>=0.7.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
 Requirement already up-to-date: setuptools in /home/s3152383/.local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow)
 Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: six>=1.10.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wheel>=0.26 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: wrapt>=1.11.1 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: google-pasta>=0.1.6 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorflow)
-Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
 Requirement already up-to-date: setuptools in /home/s3152383/.local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow)
-Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
-Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
 Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
-Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
 Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: setuptools>=41.0.0 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: setuptools in /home/s3152383/.local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: h5py in /home/s3152383/.local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow)
+Requirement already up-to-date: werkzeug>=0.11.15 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: markdown>=2.6.8 in /home/s3152383/.local/lib/python3.6/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Uninstalling Keras-Preprocessing-1.1.1:
+Exception:
+Traceback (most recent call last):
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 544, in move
+    os.rename(src, real_dst)
+OSError: [Errno 18] Invalid cross-device link: '/home/s3152383/.local/lib/python3.6/site-packages/Keras_Preprocessing-1.1.1.dist-info/RECORD' -> '/local/tmp/pip-clfdp2q6-uninstall/home/s3152383/.local/lib/python3.6/site-packages/Keras_Preprocessing-1.1.1.dist-info/RECORD'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/req/req_set.py", line 778, in install
+    requirement.uninstall(auto_confirm=True)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/req/req_install.py", line 754, in uninstall
+    paths_to_remove.remove(auto_confirm)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/req/req_uninstall.py", line 115, in remove
+    renames(path, new_path)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/utils/__init__.py", line 267, in renames
+    shutil.move(old, new)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 558, in move
+    copy_function(src, real_dst)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/s3152383/.local/lib/python3.6/site-packages/Keras_Preprocessing-1.1.1.dist-info/RECORD'
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Successfully installed keras-preprocessing-1.1.2
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Successfully installed keras-preprocessing-1.1.2
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Successfully installed keras-preprocessing-1.1.2
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+  Can't roll back Keras-Preprocessing; was not uninstalled
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Exception:
+Traceback (most recent call last):
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 544, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/s3152383/.local/lib/python3.6/site-packages/Keras_Preprocessing-1.1.2.dist-info/INSTALLER.pip' -> '/home/s3152383/.local/lib/python3.6/site-packages/Keras_Preprocessing-1.1.2.dist-info/INSTALLER'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/req/req_install.py", line 851, in install
+    self.move_wheel_files(self.source_dir, root=root, prefix=prefix)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/req/req_install.py", line 1064, in move_wheel_files
+    isolated=self.isolated,
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/site-packages/pip/wheel.py", line 507, in move_wheel_files
+    shutil.move(temp_installer, installer)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 558, in move
+    copy_function(src, real_dst)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 257, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/software/software/Python/3.6.4-foss-2019a/lib/python3.6/shutil.py", line 120, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/s3152383/.local/lib/python3.6/site-packages/Keras_Preprocessing-1.1.2.dist-info/INSTALLER.pip'
+Successfully installed keras-preprocessing-1.1.2
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Successfully installed keras-preprocessing-1.1.2
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Successfully installed keras-preprocessing-1.1.2
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
+Requirement already up-to-date: importlib-metadata; python_version < "3.8" in /home/s3152383/.local/lib/python3.6/site-packages (from markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Successfully installed keras-preprocessing-1.1.2
+Requirement already up-to-date: zipp>=0.5 in /home/s3152383/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->markdown>=2.6.8->tensorboard<1.15.0,>=1.14.0->tensorflow)
+Installing collected packages: keras-preprocessing
+  Found existing installation: Keras-Preprocessing 1.1.1
+    Can't uninstall 'Keras-Preprocessing'. No files were found to uninstall.
 You are using pip version 9.0.1, however version 20.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
-2020-05-13 18:58:16.233485: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.307916: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.308422: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.317236: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.369760: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.307916: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.317256: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.584601: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.603513: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:16.603513: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-05-13 18:58:17.288379: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500150000 Hz
-2020-05-13 18:58:17.289076: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500195000 Hz
-2020-05-13 18:58:17.289842: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500285000 Hz
-2020-05-13 18:58:17.290458: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499870000 Hz
-2020-05-13 18:58:17.291831: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500140000 Hz
-2020-05-13 18:58:17.289842: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500285000 Hz
-2020-05-13 18:58:17.292186: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400125000 Hz
-2020-05-13 18:58:17.291831: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2500140000 Hz
-2020-05-13 18:58:17.292186: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400125000 Hz
-2020-05-13 18:58:17.292186: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400125000 Hz
-2020-05-13 18:58:17.349027: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4079300 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.349481: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5698f10 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.349781: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49122e0 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.350252: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x52854c0 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.350690: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.351596: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4ceddc0 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.349503: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4fc3250 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.351871: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x53dc260 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.353016: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.350269: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55aa940 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.356857: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.351789: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.351871: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5390e80 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.354425: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.358345: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.351875: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4f2f580 executing computations on platform Host. Devices:
-2020-05-13 18:58:17.363279: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.359476: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.367882: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:17.372158: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-05-13 18:58:18.276068: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.277025: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.278291: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.277018: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.414374: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.414387: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.424229: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.424545: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.424545: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
-2020-05-13 18:58:18.424545: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Successfully installed keras-preprocessing-1.1.2
+You are using pip version 9.0.1, however version 20.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+2020-05-14 12:50:22.944365: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.944364: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.957780: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.970145: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.972658: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.974018: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.974150: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.978629: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:22.996586: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:23.055045: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-05-14 12:50:23.853923: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499880000 Hz
+2020-05-14 12:50:23.853934: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499880000 Hz
+2020-05-14 12:50:23.860157: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3d40270 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.860159: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3901c30 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.860238: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.860266: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.862140: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400060000 Hz
+2020-05-14 12:50:23.865748: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399995000 Hz
+2020-05-14 12:50:23.867009: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4a0be10 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.865748: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399995000 Hz
+2020-05-14 12:50:23.868111: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.871095: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499955000 Hz
+2020-05-14 12:50:23.871183: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x40db940 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.871118: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499955000 Hz
+2020-05-14 12:50:23.871188: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x445ec80 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.873664: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.876554: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.876529: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x486ca20 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.876529: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49530d0 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.877801: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.877831: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.881217: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399940000 Hz
+2020-05-14 12:50:23.881712: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2400030000 Hz
+2020-05-14 12:50:23.881238: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2399940000 Hz
+2020-05-14 12:50:23.885111: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x54cbe60 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.885134: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5421c30 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.885218: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.885251: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:23.920185: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x57e8a20 executing computations on platform Host. Devices:
+2020-05-14 12:50:23.922211: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 12:50:24.114721: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.117895: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.119030: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.120315: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.120315: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.121713: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.123391: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.123390: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.125100: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2020-05-14 12:50:24.137553: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
 Using TensorFlow backend.
 /home/s3152383/.local/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
   _np_qint8 = np.dtype([("qint8", np.int8, 1)])
@@ -546,17 +876,18 @@ WARNING:tensorflow:From /home/s3152383/.local/lib/python3.6/site-packages/keras/
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431247 for user 's3152383'
-Finished at: Wed May 13 22:17:53 CEST 2020
+Job 11454339 for user 's3152383'
+Finished at: Thu May 14 17:35:18 CEST 2020
 
 Job details:
 ============
@@ -564,21 +895,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node189
+Nodes               : pg-node087
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:52:59
-End                 : 2020-05-13T22:17:53
-Reserved walltime   : 20:00:00
-Used walltime       : 03:24:54
-Used CPU time       : 03:18:50 (efficiency: 97.04%)
-% User (Computation): 98.61%
-% System (I/O)      :  1.39%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T17:35:18
+Reserved walltime   : 10:00:00
+Used walltime       : 04:46:06
+Used CPU time       : 04:44:40 (efficiency: 99.50%)
+% User (Computation): 98.04%
+% System (I/O)      :  1.96%
 Mem reserved        : 800M/node
-Max Mem used        : 163.96M (pg-node189)
-Max Disk Write      : 430.08K (pg-node189)
-Max Disk Read       : 21.70M (pg-node189)
+Max Mem used        : 165.82M (pg-node087)
+Max Disk Write      : 1.10M (pg-node087)
+Max Disk Read       : 22.75M (pg-node087)
 
 
 Acknowledgements:
@@ -592,17 +923,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431248 for user 's3152383'
-Finished at: Wed May 13 22:18:37 CEST 2020
+Job 11454337 for user 's3152383'
+Finished at: Thu May 14 17:42:48 CEST 2020
 
 Job details:
 ============
@@ -610,21 +942,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node189
+Nodes               : pg-node009
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:52:59
-End                 : 2020-05-13T22:18:37
-Reserved walltime   : 20:00:00
-Used walltime       : 03:25:38
-Used CPU time       : 03:20:07 (efficiency: 97.32%)
-% User (Computation): 98.63%
-% System (I/O)      :  1.38%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T17:42:48
+Reserved walltime   : 10:00:00
+Used walltime       : 04:53:36
+Used CPU time       : 04:52:20 (efficiency: 99.57%)
+% User (Computation): 98.00%
+% System (I/O)      :  2.00%
 Mem reserved        : 800M/node
-Max Mem used        : 165.33M (pg-node189)
-Max Disk Write      : 430.08K (pg-node189)
-Max Disk Read       : 21.70M (pg-node189)
+Max Mem used        : 161.36M (pg-node009)
+Max Disk Write      : 634.88K (pg-node009)
+Max Disk Read       : 22.29M (pg-node009)
 
 
 Acknowledgements:
@@ -638,17 +970,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431261 for user 's3152383'
-Finished at: Wed May 13 22:20:58 CEST 2020
+Job 11454338 for user 's3152383'
+Finished at: Thu May 14 17:43:48 CEST 2020
 
 Job details:
 ============
@@ -656,21 +989,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node022
+Nodes               : pg-node009
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:54:03
-End                 : 2020-05-13T22:20:58
-Reserved walltime   : 20:00:00
-Used walltime       : 03:26:55
-Used CPU time       : 03:22:26 (efficiency: 97.83%)
-% User (Computation): 98.55%
-% System (I/O)      :  1.45%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T17:43:48
+Reserved walltime   : 10:00:00
+Used walltime       : 04:54:36
+Used CPU time       : 04:53:33 (efficiency: 99.64%)
+% User (Computation): 98.05%
+% System (I/O)      :  1.95%
 Mem reserved        : 800M/node
-Max Mem used        : 165.12M (pg-node022)
-Max Disk Write      : 430.08K (pg-node022)
-Max Disk Read       : 21.69M (pg-node022)
+Max Mem used        : 166.02M (pg-node009)
+Max Disk Write      : 1.00M (pg-node009)
+Max Disk Read       : 22.56M (pg-node009)
 
 
 Acknowledgements:
@@ -684,17 +1017,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431249 for user 's3152383'
-Finished at: Wed May 13 22:24:02 CEST 2020
+Job 11454340 for user 's3152383'
+Finished at: Thu May 14 17:44:41 CEST 2020
 
 Job details:
 ============
@@ -702,21 +1036,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node189
+Nodes               : pg-node087
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:52:59
-End                 : 2020-05-13T22:24:02
-Reserved walltime   : 20:00:00
-Used walltime       : 03:31:03
-Used CPU time       : 03:25:31 (efficiency: 97.38%)
-% User (Computation): 98.58%
-% System (I/O)      :  1.43%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T17:44:41
+Reserved walltime   : 10:00:00
+Used walltime       : 04:55:29
+Used CPU time       : 04:54:21 (efficiency: 99.62%)
+% User (Computation): 98.10%
+% System (I/O)      :  1.91%
 Mem reserved        : 800M/node
-Max Mem used        : 163.63M (pg-node189)
-Max Disk Write      : 430.08K (pg-node189)
-Max Disk Read       : 21.70M (pg-node189)
+Max Mem used        : 164.23M (pg-node087)
+Max Disk Write      : 1.09M (pg-node087)
+Max Disk Read       : 22.74M (pg-node087)
 
 
 Acknowledgements:
@@ -730,25 +1064,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
-Running program with the following parameters:
-Algorithm: qva-learning 
-Epsilon: 0.1 
-Visiongrid size: 7 
-Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
-NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431245 for user 's3152383'
-Finished at: Wed May 13 22:31:40 CEST 2020
+Job 11454342 for user 's3152383'
+Finished at: Thu May 14 17:55:05 CEST 2020
 
 Job details:
 ============
@@ -756,21 +1083,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node022
+Nodes               : pg-node164
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:52:59
-End                 : 2020-05-13T22:31:40
-Reserved walltime   : 20:00:00
-Used walltime       : 03:38:41
-Used CPU time       : 03:33:25 (efficiency: 97.59%)
-% User (Computation): 98.57%
-% System (I/O)      :  1.43%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T17:55:05
+Reserved walltime   : 10:00:00
+Used walltime       : 05:05:53
+Used CPU time       : 05:04:42 (efficiency: 99.61%)
+% User (Computation): 98.10%
+% System (I/O)      :  1.90%
 Mem reserved        : 800M/node
-Max Mem used        : 162.37M (pg-node022)
-Max Disk Write      : 430.08K (pg-node022)
-Max Disk Read       : 21.69M (pg-node022)
+Max Mem used        : 166.65M (pg-node164)
+Max Disk Write      : 1.11M (pg-node164)
+Max Disk Read       : 22.79M (pg-node164)
 
 
 Acknowledgements:
@@ -784,17 +1111,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431264 for user 's3152383'
-Finished at: Wed May 13 22:35:46 CEST 2020
+Job 11454344 for user 's3152383'
+Finished at: Thu May 14 17:58:24 CEST 2020
 
 Job details:
 ============
@@ -802,21 +1130,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node084
+Nodes               : pg-node177
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:54:03
-End                 : 2020-05-13T22:35:45
-Reserved walltime   : 20:00:00
-Used walltime       : 03:41:42
-Used CPU time       : 03:37:24 (efficiency: 98.06%)
-% User (Computation): 98.64%
-% System (I/O)      :  1.37%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T17:58:23
+Reserved walltime   : 10:00:00
+Used walltime       : 05:09:11
+Used CPU time       : 05:07:45 (efficiency: 99.54%)
+% User (Computation): 98.18%
+% System (I/O)      :  1.82%
 Mem reserved        : 800M/node
-Max Mem used        : 164.68M (pg-node084)
-Max Disk Write      : 430.08K (pg-node084)
-Max Disk Read       : 21.69M (pg-node084)
+Max Mem used        : 164.81M (pg-node177)
+Max Disk Write      : 1.21M (pg-node177)
+Max Disk Read       : 23.00M (pg-node177)
 
 
 Acknowledgements:
@@ -830,17 +1158,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431246 for user 's3152383'
-Finished at: Wed May 13 22:49:43 CEST 2020
+Job 11454343 for user 's3152383'
+Finished at: Thu May 14 18:02:17 CEST 2020
 
 Job details:
 ============
@@ -848,21 +1177,70 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node027
+Nodes               : pg-node177
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:52:59
-End                 : 2020-05-13T22:49:43
-Reserved walltime   : 20:00:00
-Used walltime       : 03:56:44
-Used CPU time       : 03:50:43 (efficiency: 97.46%)
-% User (Computation): 98.56%
-% System (I/O)      :  1.44%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T18:02:17
+Reserved walltime   : 10:00:00
+Used walltime       : 05:13:05
+Used CPU time       : 05:11:54 (efficiency: 99.62%)
+% User (Computation): 98.16%
+% System (I/O)      :  1.84%
 Mem reserved        : 800M/node
-Max Mem used        : 162.34M (pg-node027)
-Max Disk Write      : 430.08K (pg-node027)
-Max Disk Read       : 21.69M (pg-node027)
+Max Mem used        : 162.65M (pg-node177)
+Max Disk Write      : 1.17M (pg-node177)
+Max Disk Read       : 23.05M (pg-node177)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.831923). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Visiongrid size: 5 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11454336 for user 's3152383'
+Finished at: Thu May 14 18:21:59 CEST 2020
+
+Job details:
+============
+
+Name                : qva_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node210
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T18:21:59
+Reserved walltime   : 10:00:00
+Used walltime       : 05:32:47
+Used CPU time       : 05:31:11 (efficiency: 99.52%)
+% User (Computation): 97.93%
+% System (I/O)      :  2.07%
+Mem reserved        : 800M/node
+Max Mem used        : 163.27M (pg-node210)
+Max Disk Write      : 1.09M (pg-node210)
+Max Disk Read       : 22.75M (pg-node210)
 
 
 Acknowledgements:
@@ -876,17 +1254,18 @@ https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431262 for user 's3152383'
-Finished at: Wed May 13 23:11:28 CEST 2020
+Job 11454341 for user 's3152383'
+Finished at: Thu May 14 19:10:29 CEST 2020
 
 Job details:
 ============
@@ -894,21 +1273,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node067
+Nodes               : pg-node164
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:54:03
-End                 : 2020-05-13T23:11:28
-Reserved walltime   : 20:00:00
-Used walltime       : 04:17:25
-Used CPU time       : 04:12:55 (efficiency: 98.25%)
-% User (Computation): 98.48%
-% System (I/O)      :  1.52%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T19:10:29
+Reserved walltime   : 10:00:00
+Used walltime       : 06:21:17
+Used CPU time       : 06:19:58 (efficiency: 99.65%)
+% User (Computation): 98.15%
+% System (I/O)      :  1.84%
 Mem reserved        : 800M/node
-Max Mem used        : 163.27M (pg-node067)
-Max Disk Write      : 430.08K (pg-node067)
-Max Disk Read       : 21.69M (pg-node067)
+Max Mem used        : 165.42M (pg-node164)
+Max Disk Write      : 1.00M (pg-node164)
+Max Disk Read       : 22.57M (pg-node164)
 
 
 Acknowledgements:
@@ -919,20 +1298,49 @@ Please see this page for information about acknowledging Peregrine in your publi
 https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 
 ################################################################################
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.426451). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.303401). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.251345). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.171580). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (1.452821). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.569903). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.254977). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.107224). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.234124). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.122201). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.339217). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.170818). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.286434). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
+/home/s3152383/.local/lib/python3.6/site-packages/keras/callbacks/callbacks.py:95: RuntimeWarning: Method (on_train_batch_end) is slow compared to the batch update (0.688489). Check your callbacks.
+  % (hook_name, delta_t_median), RuntimeWarning)
 Running program with the following parameters:
 Algorithm: qva-learning 
 Epsilon: 0.1 
-Visiongrid size: 7 
+Visiongrid size: 5 
 Discount-factor: 0.99 
-Learning-rate_q: 0.0005 	 Learning_rate_v: 0.0005 	Learning-rate-a: 0.0005
+Learning rate start: 0.005 
+Learning rate end: 0.0005
 NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
-model saved as  outputs/qva-learning20000-v7-e0.1-y0.99-lq0.0005-lv0.0005-la0.0005
+model saved as  outputs/qva-learning20000-v5-e0.1-y0.99-lr0.005-lr0.0005
 
 
 ###############################################################################
 Peregrine Cluster
-Job 11431263 for user 's3152383'
-Finished at: Wed May 13 23:35:21 CEST 2020
+Job 11454316 for user 's3152383'
+Finished at: Thu May 14 19:29:09 CEST 2020
 
 Job details:
 ============
@@ -940,21 +1348,21 @@ Job details:
 Name                : qva_learning
 User                : s3152383
 Partition           : regular
-Nodes               : pg-node124
+Nodes               : pg-node210
 Cores               : 1
 State               : COMPLETED
-Submit              : 2020-05-13T18:51:29
-Start               : 2020-05-13T18:54:03
-End                 : 2020-05-13T23:35:21
-Reserved walltime   : 20:00:00
-Used walltime       : 04:41:18
-Used CPU time       : 04:36:27 (efficiency: 98.28%)
-% User (Computation): 98.41%
-% System (I/O)      :  1.58%
+Submit              : 2020-05-14T12:48:19
+Start               : 2020-05-14T12:49:12
+End                 : 2020-05-14T19:29:09
+Reserved walltime   : 10:00:00
+Used walltime       : 06:39:57
+Used CPU time       : 06:20:43 (efficiency: 95.19%)
+% User (Computation): 97.96%
+% System (I/O)      :  2.08%
 Mem reserved        : 800M/node
-Max Mem used        : 164.04M (pg-node124)
-Max Disk Write      : 430.08K (pg-node124)
-Max Disk Read       : 21.69M (pg-node124)
+Max Mem used        : 166.65M (,pg-node009,pg-node087,pg-node164,pg-node177,pg-node179,pg-node210)
+Max Disk Write      : 1.21M (,pg-node009,pg-node087,pg-node164,pg-node177,pg-node179,pg-node210)
+Max Disk Read       : 23.05M (,pg-node009,pg-node087,pg-node164,pg-node177,pg-node179,pg-node210)
 
 
 Acknowledgements:

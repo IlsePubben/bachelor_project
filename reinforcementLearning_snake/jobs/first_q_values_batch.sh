@@ -7,7 +7,7 @@
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ilse.pubben@gmail.com
-#SBATCH --array=0-2
+#SBATCH --array=0-1
 module load Python/3.6.4-foss-2019a
 module load GCCcore/8.2.0
 pip install --user matplotlib

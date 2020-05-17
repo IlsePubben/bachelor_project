@@ -8,6 +8,7 @@ last1000points = list()
 max_points = 0
 counter = 0
 first_q_value = list() 
+cumulative_rewards = list()
 
 def plot_average100():
     x_axis = [i*100 for i in range(1,len(average_points)+1)]
@@ -87,3 +88,16 @@ def plot_directory(directory, epochs, epsilon0):
     plt.legend()
     plt.show()
  
+def first_q_values():
+    x = [i for i in range(0,19935)]
+    with open("q-learningfirst_q_values", "r") as file: 
+        y = eval(file.readline())
+        plt.plot(x,y,label="q-learning")
+    x = [i for i in range(0,19714)]
+    with open("qv-learningfirst_q_values", "r") as file: 
+        y = eval(file.readline())
+        plt.plot(x,y,label="qv-learning")
+    plt.xlabel("Epoch")
+    plt.ylabel("First Q-value")
+    plt.legend()
+    plt.show()

@@ -16,10 +16,14 @@ q_values = np.zeros((1,4)) #to speed up qvmax-learniing
 callback = [LearningRateScheduler(util.annealing_learningrate)]
 
 tmp = True
+
+cumulative_reward = 0
+
 def q_learning(timestep, model): 
     global game_state
     global state 
     global got_stuck
+    global cumulative_reward
 
     #toggle for visualisation 
     # visual_game.visualize(game_state)
@@ -34,9 +38,12 @@ def q_learning(timestep, model):
     new_state, reward = game_state.make_move(util.actions[action])
     new_qValues = model.mlp.predict(new_state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     maxQ = np.max(new_qValues)
+    cumulative_reward += reward
     if reward == param.reward_dead: #terminal state
         update = reward
         stats.first_q_value.append(qValues[0][0])
+        stats.cumulative_rewards.append(cumulative_reward)
+        cumulative_reward = 0
         on_death()
     else:
         update = reward + param.discount_factor * maxQ
@@ -59,6 +66,7 @@ def qv_learning(timestep, q_model, v_model):
     global state
     global game_state
     global got_stuck
+    global cumulative_reward
     
     if (param.epoch == 0): 
         state = game_state.get_state()
@@ -69,9 +77,12 @@ def qv_learning(timestep, q_model, v_model):
     
     new_state, reward = game_state.make_move(util.actions[action])
     new_vValue = v_model.mlp.predict(new_state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
+    cumulative_reward += reward
     if reward == param.reward_dead: #terminal state
         update = np.array([[reward]])
         stats.first_q_value.append(q_values[0][0])
+        stats.cumulative_rewards.append(cumulative_reward)
+        cumulative_reward = 0
         on_death()
     else: 
         update = reward + param.discount_factor * new_vValue

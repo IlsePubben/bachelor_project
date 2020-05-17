@@ -7,6 +7,7 @@ average_points = list()
 last1000points = list()
 max_points = 0
 counter = 0
+first_q_value = list() 
 
 def plot_average100():
     x_axis = [i*100 for i in range(1,len(average_points)+1)]
@@ -46,24 +47,40 @@ def average_list_file(filepath):
     lists = lists[1:]
     lists = np.array(lists, dtype=float)
     average = np.average(lists,axis=0)
-    average = list(average)
-    filepath = filepath.replace(".txt", "")
-    filepath += "_averaged"
-    with open(filepath, "w") as file: 
-        file.write(str(average))
+    return list(average)
+    # filepath = filepath.replace(".txt", "")
+    # filepath += "_averaged"
+    # with open(filepath, "w") as file: 
+    #     file.write(str(average))
 
 def average_directory(directory):
     for filename in os.listdir(directory):
         filepath = directory + filename
         average_list_file(filepath)
-    
+
+def get_standard_deviation(filepath):
+    lists = [[]]
+    with open(filepath, "r") as file: 
+        while True: 
+            line = file.readline()
+            if not line: 
+                break
+            lists.append(eval(line))
+    lists = lists[1:]
+    lists = np.array(lists, dtype=float)
+    std = np.std(lists, axis=0)
+    return list(std)
+            
 def plot_directory(directory, epochs, epsilon0):
     x_axis = [i*100 for i in range(1,epochs//100)]
     for filename in os.listdir(directory):
         filepath = directory + filename
-        with open(filepath, "r") as file:
-            model = eval(file.readline())
-        plt.plot(x_axis, model, label=filename)
+        average = average_list_file(filepath)
+        std = get_standard_deviation(filepath)
+        plt.errorbar(x_axis, average, yerr=std, capsize=2, label=filename)
+        # with open(filepath, "r") as file:
+        #     model = eval(file.readline())
+        # plt.plot(x_axis, model, label=filename)
     plt.xlabel("Epoch")
     plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
     plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")

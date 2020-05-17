@@ -34,7 +34,10 @@ def save_model(model):
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-        file.close()
+    savefile = str(param.algorithm) + "first_q_values"
+    with open(savefile, "a") as file: 
+        file.write(str(stats.first_q_value))
+        
         
 def usage():
     print("OPTIONS: \n -h --help\n -a --algorithm: random | manual | q-learning",

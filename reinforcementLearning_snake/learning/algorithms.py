@@ -28,9 +28,7 @@ def q_learning(timestep, model):
         state = game_state.get_state()
         param.epoch += 1
     
-    print(param.epoch)
     qValues = model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
-    
     action = util.epsilon_greedy_action_selection(qValues)
     
     new_state, reward = game_state.make_move(util.actions[action])
@@ -38,6 +36,7 @@ def q_learning(timestep, model):
     maxQ = np.max(new_qValues)
     if reward == param.reward_dead: #terminal state
         update = reward
+        stats.first_q_value.append(qValues[0][0])
         on_death()
     else:
         update = reward + param.discount_factor * maxQ
@@ -72,12 +71,13 @@ def qv_learning(timestep, q_model, v_model):
     new_vValue = v_model.mlp.predict(new_state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     if reward == param.reward_dead: #terminal state
         update = np.array([[reward]])
+        stats.first_q_value.append(q_values[0][0])
         on_death()
     else: 
         update = reward + param.discount_factor * new_vValue
-    
+        
     target_output = q_values
-    target_output[0][action] = update 
+    target_output[0][action] = update[0][0]
 
     v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=callback, verbose=0)

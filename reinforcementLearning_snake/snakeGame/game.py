@@ -25,7 +25,7 @@ class Game():
         self.tail_locations.append(self.head_location)
         new_state = numpy.zeros(2 * param.vision_size**2 + 2)
         # new_state = numpy.zeros(6)
-        reward = 0
+        reward = param.reward_default
         
         new_head_location = (self.head_location[0] + action[0], self.head_location[1] + action[1])
         #out of bounds

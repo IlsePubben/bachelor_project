@@ -90,11 +90,11 @@ def plot_directory(directory, epochs, epsilon0):
     plt.show()
 
 def rewards():
-    x = [i for i in range(0,19718)]
+    x = [i for i in range(0,19999)]
     with open("q-learning_reward", "r") as file: 
         y = eval(file.readline())
         plt.scatter(x,y,label="q-learning rewards")
-    x = [i for i in range(0,18987)]
+    # x = [i for i in range(0,18987)]
     with open("qv-learning_reward", "r") as file: 
         y = eval(file.readline())
         plt.scatter(x,y,label="qv-learning rewards")
@@ -104,25 +104,17 @@ def rewards():
     plt.show()
 
 def first_q_values():
-    x = [i for i in range(0,19718)]
+    x = [i for i in range(0,19999)]
     with open("q-learningfirst_q_values", "r") as file: 
         y = eval(file.readline())
+        print(len(y))
         plt.scatter(x,y,label="q-learning", marker='o')
-    print("one")
-    x = [i for i in range(0,19718)]
-    # with open("q-learning_reward", "r") as file: 
-    #     y = eval(file.readline())
-    #     plt.plot(x,y,label="q-learning rewards")
-    print("two")
-    x = [i for i in range(0,18987)]
+
     with open("qv-learningfirst_q_values", "r") as file: 
         y = eval(file.readline())
         plt.scatter(x,y,label="qv-learning")
-    print("three")
-    # with open("qv-learning_reward", "r") as file: 
-    #     y = eval(file.readline())
-    #     plt.plot(x,y,label="qv-learning rewards")
-    print("four")
+
+
     plt.xlabel("Epoch")
     plt.ylabel("First Q-value")
     plt.legend()

@@ -34,10 +34,14 @@ def save_model(model):
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    savefile = str(param.algorithm) + "first_q_values"
+    filepath += "_last"
+    with open(filepath,"w") as file: 
+        file.write(str(stats.average_points))
+        file.write("\n")
+    savefile = "first_q_values" + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))
-    savefile = str(param.algorithm) + "_reward"
+    savefile = "reward"  + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.cumulative_rewards)) 
         

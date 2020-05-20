@@ -54,9 +54,12 @@ def q_learning(timestep, model):
     model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2),target_output,batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
-    # if game_state.time_stuck > param.game_size**2:
-    #     got_stuck += 1
-    #     on_death()
+    if game_state.time_stuck > 2000:
+        got_stuck += 1
+        stats.first_q_value.append(q_values[0][0])
+        stats.cumulative_rewards.append(cumulative_reward)
+        cumulative_reward = 0
+        on_death()
     
     #toggle for visualisation 
     # if param.epoch >= param.max_epochs:
@@ -94,14 +97,18 @@ def qv_learning(timestep, q_model, v_model):
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
-    # if game_state.time_stuck > param.game_size**2:
-    #     got_stuck += 1
-    #     on_death()
+    if game_state.time_stuck > 2000:
+        got_stuck += 1
+        stats.first_q_value.append(q_values[0][0])
+        stats.cumulative_rewards.append(cumulative_reward)
+        cumulative_reward = 0
+        on_death()
 
 def qva_learning(timestep, q_model, v_model, a_model):
     global state
     global game_state
     global got_stuck
+    global cumulative_reward
     # global v_value
     
     if (param.epoch == 0): 
@@ -118,6 +125,9 @@ def qva_learning(timestep, q_model, v_model, a_model):
     
     if reward == param.reward_dead: #terminal state
         update = np.array([[reward]])
+        stats.first_q_value.append(q_values[0][0])
+        stats.cumulative_rewards.append(cumulative_reward)
+        cumulative_reward = 0
         on_death()
     else: 
         update = reward + param.discount_factor * new_vValue
@@ -133,9 +143,12 @@ def qva_learning(timestep, q_model, v_model, a_model):
     state = new_state 
     # v_value = new_vValue
     
-    # if game_state.time_stuck > param.game_size**2:
-    #     got_stuck += 1
-    #     on_death()
+    if game_state.time_stuck > 2000:
+        got_stuck += 1
+        stats.first_q_value.append(q_values[0][0])
+        stats.cumulative_rewards.append(cumulative_reward)
+        cumulative_reward = 0
+        on_death()
 
 def qvmax_learning(timestep, q_model, v_model):
     global state

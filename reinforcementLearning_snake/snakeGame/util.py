@@ -18,6 +18,13 @@ def epsilon_greedy_action_selection(values):
     else: 
         return np.argmax(values) #choose best action 
 
+def boltzmann_exploration(values): 
+    val = values.flatten()
+    exps = [np.exp(i/param.temperature) for i in val]
+    probabilities = [i/sum(exps) for i in exps]
+    action = np.random.choice(4, 1, p=probabilities)
+    return action[0]
+
 #a scheduler needs to accept these parameters but we're not using them
 def annealing_learningrate(e,lr): 
     # print("learning rate:", param.lr_annealing_factor**param.epoch * param.lr_start, e )
@@ -38,10 +45,10 @@ def save_model(model):
     with open(filepath,"w") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    savefile = "first_q_values" + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/first_q_values" + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))
-    savefile = "reward"  + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/reward"  + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.cumulative_rewards)) 
         

@@ -7,7 +7,7 @@
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ilse.pubben@gmail.com
-#SBATCH --array=0-9
+#SBATCH --array=0-8
 
 module load Python/3.6.4-foss-2019a
 module load GCCcore/8.2.0
@@ -18,4 +18,4 @@ pip install --user --upgrade tensorflow
 algorithm=(q-learning q-learning q-learning qv-learning qv-learning qv-learning qva-learning qva-learning qva-learning)
 visionGrid=(3 5 7 3 5 7 3 5 7)
 
-python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}]} -e 0.3 -y 0.99 -v ${visionGrid[${SLURM_ARRAY_TASK_ID}]}
+python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}]} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}]}

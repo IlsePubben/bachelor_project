@@ -1,8 +1,9 @@
-reward_apple = 1
+reward_apple = 5
 reward_dead = -10
 reward_default = -0.1
 reward_approach_apple = 0
 reward_avoid_apple = 0
+temperature = 1
 initial_snake_length = 3
 game_size = 12
 vision_size = 5

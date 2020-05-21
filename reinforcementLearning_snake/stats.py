@@ -91,32 +91,59 @@ def plot_directory(directory, epochs, epsilon0):
     plt.legend(bbox_to_anchor=(0.0, 1), loc=2)
     plt.show()
 
-def rewards():
+def plot_3_graphs(directory, title=""):
+    x_axis = [i*100 for i in range(1,200)]
+    fig, axs = plt.subplots(3, sharex=True)
+    fig.tight_layout()
+    for filename in sorted(os.listdir(directory)):
+        if filename.endswith("last"): 
+            filepath = directory + filename
+            average = average_list_file(filepath)
+            std = get_standard_deviation(filepath)
+            axs[0].plot(x_axis, average, label=filename)
+            axs[0].fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
+    x_axis = [i for i in range(1,20000)]
+    dir_rewards = directory + "/reward/"
+    for filename in sorted(os.listdir(dir_rewards)):
+        filepath = dir_rewards + filename
+        with open(filepath, "r") as file: 
+            y = eval(file.readline())
+            axs[1].scatter(x_axis,y,label=filename,alpha=0.2)
+    dir_firstQ = directory + "/firstQ/"
+    for filename in sorted(os.listdir(dir_firstQ)):
+        filepath = dir_firstQ + filename
+        with open(filepath, "r") as file: 
+            y = eval(file.readline())
+            axs[2].scatter(x_axis,y,label=filename, alpha=0.2)
+    axs[0].legend()
+    axs[0].set_title(title)
+    axs[1].set_title("Rewards")
+    axs[2].set_title("First Q-value")
+    fig.show()
+    # for ax in axs: 
+    #     ax.legend()
+    
+
+def rewards(directory):
     x = [i for i in range(0,19999)]
-    with open("q-learning_reward", "r") as file: 
-        y = eval(file.readline())
-        plt.scatter(x,y,label="q-learning rewards")
-    # x = [i for i in range(0,18987)]
-    with open("qv-learning_reward", "r") as file: 
-        y = eval(file.readline())
-        plt.scatter(x,y,label="qv-learning rewards")
+    for filename in os.listdir(directory):
+        filepath = directory + filename
+        with open(filepath, "r") as file: 
+            y = eval(file.readline())
+            plt.scatter(x,y,label="q-learning rewards")
     plt.xlabel("Epoch")
     plt.ylabel("Cumulative reward")
     plt.legend()
     plt.show()
 
-def first_q_values():
+def first_q_values(directory):
     x = [i for i in range(0,19999)]
-    with open("q-learningfirst_q_values", "r") as file: 
-        y = eval(file.readline())
-        print(len(y))
-        plt.scatter(x,y,label="q-learning", marker='o')
-
-    with open("qv-learningfirst_q_values", "r") as file: 
-        y = eval(file.readline())
-        plt.scatter(x,y,label="qv-learning")
-
-
+    for filename in os.listdir(directory):
+        filepath = directory + filename
+        with open(filepath, "r") as file: 
+            y = eval(file.readline())
+            print(len(y))
+            plt.scatter(x,y,label="q-learning", marker='o')
     plt.xlabel("Epoch")
     plt.ylabel("First Q-value")
     plt.legend()

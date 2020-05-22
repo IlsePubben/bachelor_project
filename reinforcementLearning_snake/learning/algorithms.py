@@ -57,7 +57,7 @@ def q_learning(timestep, model):
     
     if game_state.time_stuck > param.game_size**2:
         got_stuck += 1
-        stats.first_q_value.append(q_values[0][0])
+        stats.first_q_value.append(qValues[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
         on_death()

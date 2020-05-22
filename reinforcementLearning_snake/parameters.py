@@ -1,6 +1,6 @@
 reward_apple = 5
 reward_dead = -10
-reward_default = 0
+reward_default = -0.1
 reward_approach_apple = 0
 reward_avoid_apple = 0
 temperature = 1

@@ -10,8 +10,8 @@ state = game_state.get_state()
 
 got_stuck = 0
 
-v_value = 0 #to speed up qv(a)-learning
-q_values = np.zeros((1,4)) #to speed up qvmax-learniing
+# v_value = 0 #to speed up qv(a)-learning
+# q_values = np.zeros((1,4)) #to speed up qvmax-learniing
 
 callback = [LearningRateScheduler(util.annealing_learningrate)]
 
@@ -55,7 +55,7 @@ def q_learning(timestep, model):
     model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2),target_output,batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
-    if game_state.time_stuck > 2000:
+    if game_state.time_stuck > param.game_size**2:
         got_stuck += 1
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
@@ -99,7 +99,7 @@ def qv_learning(timestep, q_model, v_model):
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
-    if game_state.time_stuck > 2000:
+    if game_state.time_stuck > param.game_size**2:
         got_stuck += 1
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
@@ -147,7 +147,7 @@ def qva_learning(timestep, q_model, v_model, a_model):
     state = new_state 
     # v_value = new_vValue
     
-    if game_state.time_stuck > 2000:
+    if game_state.time_stuck > param.game_size**2:
         got_stuck += 1
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)

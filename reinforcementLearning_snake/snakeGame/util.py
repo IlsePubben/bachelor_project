@@ -33,7 +33,7 @@ def annealing_learningrate(e,lr):
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
                 "-v" + str(param.vision_size) +
-                "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
+                "-t" + str(param.temperature) + "-y" + str(param.discount_factor) + 
                 "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end))
     # model.mlp.save(filepath)
     print("model saved as ", filepath)
@@ -45,10 +45,10 @@ def save_model(model):
     with open(filepath,"w") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    savefile = "outputs/first_q_values" + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))
-    savefile = "outputs/reward"  + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/reward_"  + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.cumulative_rewards)) 
         
@@ -58,14 +58,14 @@ def usage():
     print(" -e --epsilon: value between 0-1")
     print(" -y --discountFactor: value between 0-1")
     print(" -v --visionSize: size of vision grid")
-    print(" -t --test: path to model")
+    print(" -t --temperature: value between 0-1")
     # print(" --lrQ: Learning rate Q_model. default=0.001")
     # print(" --lrV: Learning rate V_model. default=0.001")
     # print(" --lrA: Learning rate A_model. default=0.001")
 
 def handle_command_line_options(argv):
     try: 
-        options, args = getopt.getopt(argv, "ha:t:e:y:v:", ["help", "algorithm=", "test=", "epsilon=",
+        options, args = getopt.getopt(argv, "ha:t:e:y:v:", ["help", "algorithm=", "temperature=", "epsilon=",
                                                           "discountFactor=", "visionSize=", "lrQ=", "lrV=", "lrA="])
     except getopt.GetoptError as error:
         print(error)
@@ -83,8 +83,8 @@ def handle_command_line_options(argv):
                 usage()
                 print("non-existing algorithm")
                 sys.exit(2)
-        elif option in ("-t", "--test"):
-            param.algorithm = value
+        elif option in ("-t", "--temperature"):
+            param.temperature = float(value)
         elif option in ("-e", "--epsilon"): 
             param.start_epsilon = float(value)
             param.epsilon = param.start_epsilon
@@ -105,6 +105,7 @@ def handle_command_line_options(argv):
 def show_parameters():
     print("Running program with the following parameters:")
     print("Algorithm:",param.algorithm, "\nEpsilon:",param.epsilon,
+          "\nTemperature:",param.temperature,
           "\nVisiongrid size:",param.vision_size,
           "\nDiscount-factor:",param.discount_factor, 
           "\nLearning rate start:", param.lr_start,

@@ -45,6 +45,7 @@ def q_learning(timestep, model):
         stats.first_q_value.append(qValues[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
+        stats.difference_q_values.append(np.amax(qValues) - np.amin(qValues))
         on_death()
     else:
         update = reward + param.discount_factor * maxQ
@@ -55,11 +56,12 @@ def q_learning(timestep, model):
     model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2),target_output,batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
-    if game_state.time_stuck > param.game_size**2:
+    if game_state.time_stuck > 2000:
         got_stuck += 1
-        stats.first_q_value.append(q_values[0][0])
+        stats.first_q_value.append(qValues[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
+        stats.difference_q_values.append(np.amax(qValues) - np.amin(qValues))
         on_death()
     
     #toggle for visualisation 
@@ -88,6 +90,7 @@ def qv_learning(timestep, q_model, v_model):
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
+        stats.difference_q_values.append(np.amax(q_values) - np.amin(q_values))
         on_death()
     else: 
         update = reward + param.discount_factor * new_vValue
@@ -99,11 +102,12 @@ def qv_learning(timestep, q_model, v_model):
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=callback, verbose=0)
     state = new_state
     
-    if game_state.time_stuck > param.game_size**2:
+    if game_state.time_stuck > 2000:
         got_stuck += 1
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
+        stats.difference_q_values.append(np.amax(q_values) - np.amin(q_values))
         on_death()
 
 def qva_learning(timestep, q_model, v_model, a_model):
@@ -132,6 +136,7 @@ def qva_learning(timestep, q_model, v_model, a_model):
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
+        stats.difference_q_values.append(np.amax(q_values) - np.amin(q_values))
         on_death()
     else: 
         update = reward + param.discount_factor * new_vValue
@@ -147,11 +152,12 @@ def qva_learning(timestep, q_model, v_model, a_model):
     state = new_state 
     # v_value = new_vValue
     
-    if game_state.time_stuck > param.game_size**2:
+    if game_state.time_stuck > 2000:
         got_stuck += 1
         stats.first_q_value.append(q_values[0][0])
         stats.cumulative_rewards.append(cumulative_reward)
         cumulative_reward = 0
+        stats.difference_q_values.append(np.amax(q_values) - np.amin(q_values))
         on_death()
 
 def qvmax_learning(timestep, q_model, v_model):

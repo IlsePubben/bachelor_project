@@ -8,6 +8,7 @@ last1000points = list()
 max_points = 0
 counter = 0
 first_q_value = list() 
+difference_q_values = list() 
 cumulative_rewards = list()
 
 def plot_average100():

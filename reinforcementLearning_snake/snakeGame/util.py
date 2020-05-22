@@ -27,14 +27,20 @@ def boltzmann_exploration(values):
 
 #a scheduler needs to accept these parameters but we're not using them
 def annealing_learningrate(e,lr): 
-    # print("learning rate:", param.lr_annealing_factor**param.epoch * param.lr_start, e )
+    # print("lr Q:", param.lr_annealing_factor**param.epoch * param.lr_start, e )
     return param.lr_annealing_factor**param.epoch * param.lr_start
+def annealing_learningrate_v(e,lr): 
+    # print("lr V:", annealing_learningrate(e,lr) / 3, e )
+    return annealing_learningrate(e,lr) / 3
+def annealing_learningrate_a(e,lr): 
+    # print("lr A:", annealing_learningrate(e,lr) * 3, e )
+    return annealing_learningrate(e,lr) * 3
 
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
                 "-v" + str(param.vision_size) +
                 "-t" + str(param.temperature) + "-y" + str(param.discount_factor) + 
-                "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end))
+                "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end) + "_VQA")
     # model.mlp.save(filepath)
     print("model saved as ", filepath)
     filepath += ".txt"
@@ -45,13 +51,13 @@ def save_model(model):
     with open(filepath,"w") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    savefile = "outputs/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/first_q_values_" + str(param.algorithm) +  str(param.vision_size) + "_VQA"
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))
-    savefile = "outputs/reward_"  + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/reward_"  + str(param.algorithm) +  str(param.vision_size) + "_VQA"
     with open(savefile, "w") as file: 
         file.write(str(stats.cumulative_rewards)) 
-    savefile = "outputs/Qdifference_"  + str(param.algorithm) +  str(param.vision_size)
+    savefile = "outputs/Qdifference_"  + str(param.algorithm) +  str(param.vision_size) + "_VQA"
     with open(savefile, "w") as file: 
         file.write(str(stats.difference_q_values)) 
         

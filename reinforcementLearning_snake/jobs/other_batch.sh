@@ -2,8 +2,8 @@
 #SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --job-name=other_learning
-#SBATCH --output=other_learning
+#SBATCH --job-name=difference
+#SBATCH --output=all_algorithms
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ilse.pubben@gmail.com

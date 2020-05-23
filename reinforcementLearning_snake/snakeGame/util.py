@@ -39,7 +39,7 @@ def annealing_learningrate_a(e,lr):
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
                 "-v" + str(param.vision_size) +
-                "-t" + str(param.temperature) + "-y" + str(param.discount_factor) + 
+                "-e" + str(param.epsilon) + "-y" + str(param.discount_factor) + 
                 "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end) + "_VQA")
     # model.mlp.save(filepath)
     print("model saved as ", filepath)

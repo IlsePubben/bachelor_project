@@ -38,8 +38,8 @@ def q_learning(timestep, model):
         param.epoch += 1
     
     qValues = model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
-    # action = util.epsilon_greedy_action_selection(qValues)
-    action = util.boltzmann_exploration(qValues)
+    action = util.epsilon_greedy_action_selection(qValues)
+    # action = util.boltzmann_exploration(qValues)
     
     new_state, reward = game_state.make_move(util.actions[action])
     new_qValues = model.mlp.predict(new_state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
@@ -85,8 +85,8 @@ def qv_learning(timestep, q_model, v_model):
         param.epoch += 1
     
     q_values = q_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
-    # action = util.epsilon_greedy_action_selection(q_values)
-    action = util.boltzmann_exploration(q_values)
+    action = util.epsilon_greedy_action_selection(q_values)
+    # action = util.boltzmann_exploration(q_values)
     
     new_state, reward = game_state.make_move(util.actions[action])
     new_vValue = v_model.mlp.predict(new_state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
@@ -146,8 +146,8 @@ def qva_learning(timestep, q_model, v_model, a_model):
     q_values = q_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     a_values = a_model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)
     
-    # action = util.epsilon_greedy_action_selection(a_values)
-    action = util.boltzmann_exploration(a_values)
+    action = util.epsilon_greedy_action_selection(a_values)
+    # action = util.boltzmann_exploration(a_values)
     
     new_state, reward = game_state.make_move(util.actions[action])
     new_vValue = v_model.mlp.predict(new_state.reshape(1,2 * param.vision_size**2 + 2), batch_size=1)

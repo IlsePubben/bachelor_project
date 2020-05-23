@@ -721,3 +721,349 @@ Please see this page for information about acknowledging Peregrine in your publi
 https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
 
 ################################################################################
+Running program with the following parameters:
+Algorithm: qv-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 7 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/qv-learning20000-v7-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668825 for user 's3152383'
+Finished at: Fri May 22 14:20:49 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node146
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T14:20:49
+Reserved walltime   : 10:00:00
+Used walltime       : 02:22:20
+Used CPU time       : 02:22:12 (efficiency: 99.91%)
+% User (Computation): 98.07%
+% System (I/O)      :  1.92%
+Mem reserved        : 800M/node
+Max Mem used        : 159.26M (pg-node146)
+Max Disk Write      : 798.72K (pg-node146)
+Max Disk Read       : 22.67M (pg-node146)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+Running program with the following parameters:
+Algorithm: qv-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 5 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/qv-learning20000-v5-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668820 for user 's3152383'
+Finished at: Fri May 22 14:42:01 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node139
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T14:42:01
+Reserved walltime   : 10:00:00
+Used walltime       : 02:43:32
+Used CPU time       : 02:42:32 (efficiency: 99.39%)
+% User (Computation): 98.22%
+% System (I/O)      :  1.78%
+Mem reserved        : 800M/node
+Max Mem used        : 155.71M (pg-node139)
+Max Disk Write      : 430.08K (pg-node139)
+Max Disk Read       : 21.64M (pg-node139)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 3 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/qva-learning20000-v3-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668826 for user 's3152383'
+Finished at: Fri May 22 15:08:33 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node158
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T15:08:32
+Reserved walltime   : 10:00:00
+Used walltime       : 03:10:03
+Used CPU time       : 03:09:05 (efficiency: 99.49%)
+% User (Computation): 98.10%
+% System (I/O)      :  1.89%
+Mem reserved        : 800M/node
+Max Mem used        : 159.73M (pg-node158)
+Max Disk Write      : 430.08K (pg-node158)
+Max Disk Read       : 21.64M (pg-node158)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+Running program with the following parameters:
+Algorithm: q-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 3 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/q-learning20000-v3-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668816 for user 's3152383'
+Finished at: Fri May 22 16:00:33 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node034
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T16:00:33
+Reserved walltime   : 10:00:00
+Used walltime       : 04:02:04
+Used CPU time       : 04:01:00 (efficiency: 99.56%)
+% User (Computation): 98.13%
+% System (I/O)      :  1.87%
+Mem reserved        : 800M/node
+Max Mem used        : 155.32M (pg-node034)
+Max Disk Write      : 430.08K (pg-node034)
+Max Disk Read       : 21.64M (pg-node034)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 7 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/qva-learning20000-v7-t1-y0.99-lr0.005-lr0.0005
+Running program with the following parameters:
+Algorithm: q-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 5 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/q-learning20000-v5-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668817 for user 's3152383'
+Finished at: Fri May 22 17:59:48 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node088
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T17:59:47
+Reserved walltime   : 10:00:00
+Used walltime       : 06:01:18
+Used CPU time       : 06:00:15 (efficiency: 99.71%)
+% User (Computation): 98.23%
+% System (I/O)      :  1.76%
+Mem reserved        : 800M/node
+Max Mem used        : 154.08M (pg-node088)
+Max Disk Write      : 430.08K (pg-node088)
+Max Disk Read       : 21.64M (pg-node088)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+Running program with the following parameters:
+Algorithm: q-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 7 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/q-learning20000-v7-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668818 for user 's3152383'
+Finished at: Fri May 22 18:24:55 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node103
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T18:24:54
+Reserved walltime   : 10:00:00
+Used walltime       : 06:26:25
+Used CPU time       : 06:26:11 (efficiency: 99.94%)
+% User (Computation): 98.37%
+% System (I/O)      :  1.63%
+Mem reserved        : 800M/node
+Max Mem used        : 156.07M (pg-node103)
+Max Disk Write      : 634.88K (pg-node103)
+Max Disk Read       : 22.44M (pg-node103)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
+Running program with the following parameters:
+Algorithm: qva-learning 
+Epsilon: 0.1 
+Temperature: 1 
+Visiongrid size: 5 
+Discount-factor: 0.99 
+Learning rate start: 0.005 
+Learning rate end: 0.0005
+NO LONGER DECREASING EPSILON:  18002 e = -5.555555534456297e-06
+model saved as  outputs/qva-learning20000-v5-t1-y0.99-lr0.005-lr0.0005
+
+
+###############################################################################
+Peregrine Cluster
+Job 11668827 for user 's3152383'
+Finished at: Fri May 22 18:41:00 CEST 2020
+
+Job details:
+============
+
+Name                : other_learning
+User                : s3152383
+Partition           : regular
+Nodes               : pg-node164
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-05-22T11:57:43
+Start               : 2020-05-22T11:58:29
+End                 : 2020-05-22T18:41:00
+Reserved walltime   : 10:00:00
+Used walltime       : 06:42:31
+Used CPU time       : 06:42:06 (efficiency: 99.90%)
+% User (Computation): 98.28%
+% System (I/O)      :  1.72%
+Mem reserved        : 800M/node
+Max Mem used        : 165.48M (pg-node164)
+Max Disk Write      : 471.04K (pg-node164)
+Max Disk Read       : 22.04M (pg-node164)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################

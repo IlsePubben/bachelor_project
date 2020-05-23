@@ -3,12 +3,15 @@ from snakeGame import util, game
 # from snakeGame import visual_game
 import parameters as param
 from keras.callbacks import LearningRateScheduler
+import keras.backend as k 
 import stats
 
 game_state = game.Game()
 state = game_state.get_state()
 
 got_stuck = 0
+
+step = 0 
 
 # v_value = 0 #to speed up qv(a)-learning
 # q_values = np.zeros((1,4)) #to speed up qvmax-learniing
@@ -75,6 +78,7 @@ def qv_learning(timestep, q_model, v_model):
     global game_state
     global got_stuck
     global cumulative_reward
+    global step 
     
     if (param.epoch == 0): 
         state = game_state.get_state()
@@ -99,9 +103,24 @@ def qv_learning(timestep, q_model, v_model):
         
     target_output = q_values
     target_output[0][action] = update[0][0]
+    
+    if step < 30: 
+        step += 1
+        stats.target_outputs_v.append(update[0][0])
+        stats.target_outputs_q.append((target_output.flatten()).tolist())
+    if step == 30: 
+        step += 1
+        filepath = "outputs/target_outputs_q" + str(param.vision_size)
+        with open(filepath,"w") as file: 
+            file.write(str(stats.target_outputs_q))
+        filepath = "outputs/target_outputs_v" + str(param.vision_size)
+        with open(filepath,"w") as file: 
+            file.write(str(stats.target_outputs_v))
+        print("target outputs saved")
 
     v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1, epochs=1, callbacks=v_callback, verbose=0)
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), target_output, batch_size=1, epochs=1, callbacks=q_callback, verbose=0)
+    # print("lr_q:", k.eval(q_model.mlp.optimizer.lr), "lr_v:", k.eval(v_model.mlp.optimizer.lr))
     state = new_state
     
     if game_state.time_stuck > 2000:

@@ -10,6 +10,8 @@ counter = 0
 first_q_value = list() 
 difference_q_values = list() 
 cumulative_rewards = list()
+target_outputs_q = list()
+target_outputs_v = list() 
 
 def plot_average100():
     x_axis = [i*100 for i in range(1,len(average_points)+1)]
@@ -92,37 +94,67 @@ def plot_directory(directory, epochs, epsilon0):
     plt.legend(bbox_to_anchor=(0.0, 1), loc=2)
     plt.show()
 
-def plot_3_graphs(directory, title=""):
+def plot_4_graphs(directory, title=""):
     x_axis = [i*100 for i in range(1,200)]
-    fig, axs = plt.subplots(3, sharex=True)
+    fig, axs = plt.subplots(2,2, sharex=True)
     fig.tight_layout()
     for filename in sorted(os.listdir(directory)):
         if filename.endswith("last"): 
             filepath = directory + filename
             average = average_list_file(filepath)
             std = get_standard_deviation(filepath)
-            axs[0].plot(x_axis, average, label=filename)
-            axs[0].fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
+            axs[0,0].plot(x_axis, average, label=filename)
+            axs[0,0].fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
     x_axis = [i for i in range(1,20000)]
     dir_rewards = directory + "/reward/"
     for filename in sorted(os.listdir(dir_rewards)):
         filepath = dir_rewards + filename
         with open(filepath, "r") as file: 
             y = eval(file.readline())
-            axs[1].scatter(x_axis,y,label=filename,alpha=0.2)
+            axs[1,0].scatter(x_axis,y,label=filename,alpha=0.2)
     dir_firstQ = directory + "/firstQ/"
     for filename in sorted(os.listdir(dir_firstQ)):
         filepath = dir_firstQ + filename
         with open(filepath, "r") as file: 
             y = eval(file.readline())
-            axs[2].scatter(x_axis,y,label=filename, alpha=0.2)
-    axs[0].legend()
-    axs[0].set_title(title)
-    axs[1].set_title("Rewards")
-    axs[2].set_title("First Q-value")
+            axs[0,1].scatter(x_axis,y,label=filename, alpha=0.2)
+    dir_diff = directory + "/diff/"
+    for filename in sorted(os.listdir(dir_diff)):
+        filepath = dir_diff + filename
+        with open(filepath, "r") as file: 
+            y = eval(file.readline())
+            axs[1,1].scatter(x_axis,y,label=filename, alpha=0.2)
+    axs[0,0].legend()
+    axs[0,0].set_title("Average points")
+    axs[1,0].set_title("Rewards")
+    axs[0,1].set_title("First Q-value")
+    axs[1,1].set_title("Difference between Q-values")
+    fig.suptitle(title)
     fig.show()
     # for ax in axs: 
     #     ax.legend()
+
+def table(q_targets, v_targets, title):
+    fig = plt.figure(figsize=(8,5))
+    fig.suptitle(title)
+    ax1 = fig.add_subplot(121)
+    with open(v_targets, "r") as file: 
+        y = eval(file.readline())
+        x = [i for i in range(0,30)]
+    ax1.scatter(x,y)
+    ax2 = fig.add_subplot(122)
+    with open(q_targets, "r") as file: 
+        y = eval(file.readline())
+        # df = pd.DataFrame(y)
+        font_size=11
+        bbox=[0, 0, 1, 1]
+        ax2.axis('off')
+        mpl_table = ax2.table(cellText = y, rowLabels=[str(i) for i in range(0,30)], bbox=bbox, colLabels=[str(i) for i in range(0,4)])
+        mpl_table.auto_set_font_size(False)
+        mpl_table.set_fontsize(font_size)
+    
+    plt.show()  
+
     
 
 def rewards(directory):

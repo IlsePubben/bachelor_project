@@ -31,15 +31,15 @@ def annealing_learningrate(e,lr):
     return param.lr_annealing_factor**param.epoch * param.lr_start
 def annealing_learningrate_v(e,lr): 
     # print("lr V:", annealing_learningrate(e,lr) / 3, e )
-    return annealing_learningrate(e,lr) / 3
+    return annealing_learningrate(e,lr)
 def annealing_learningrate_a(e,lr): 
     # print("lr A:", annealing_learningrate(e,lr) * 3, e )
-    return annealing_learningrate(e,lr) * 3
+    return annealing_learningrate(e,lr)
 
 def save_model(model):
     filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
                 "-v" + str(param.vision_size) +
-                "-e" + str(param.epsilon) + "-y" + str(param.discount_factor) + 
+                "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
                 "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end) + "_VQA")
     # model.mlp.save(filepath)
     print("model saved as ", filepath)

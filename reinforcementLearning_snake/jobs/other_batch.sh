@@ -2,7 +2,7 @@
 #SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --job-name=difference
+#SBATCH --job-name=all_algorithms
 #SBATCH --output=all_algorithms
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
@@ -18,4 +18,4 @@ pip install --user --upgrade tensorflow
 algorithm=(q-learning q-learning q-learning qv-learning qv-learning qv-learning qva-learning qva-learning qva-learning)
 visionGrid=(3 5 7 3 5 7 3 5 7)
 
-python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}]} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}]}
+python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}]} -e 0.05 -v ${visionGrid[${SLURM_ARRAY_TASK_ID}]}

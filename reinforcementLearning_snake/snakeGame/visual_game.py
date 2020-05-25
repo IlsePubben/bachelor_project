@@ -19,7 +19,10 @@ for idx in range(param.game_size*param.game_size):
     tail.visible = False
     snakeTail.append(tail)
 
-epoch_label = pyglet.text.Label("Epoch 1", x=window.width/2, y=window.height-32,
+# epoch_label = pyglet.text.Label("Epoch 1", x=window.width/2, y=window.height-32,
+#                                 anchor_x='center', anchor_y='center')
+
+points_label = pyglet.text.Label("Points: 0", x=window.width/2, y=window.height-32,
                                 anchor_x='center', anchor_y='center')
 
 
@@ -31,7 +34,8 @@ def on_draw():
     window.clear()
     snake_batch.draw()
     apple.draw()
-    epoch_label.draw()
+    points_label.draw()
+    # epoch_label.draw()
     
 def visualize(game, action=[-1,0]):
     rotate_head(action)
@@ -46,6 +50,8 @@ def visualize(game, action=[-1,0]):
         snakeTail[idx].y = window.height - (gridSize/2 + tail[0] * gridSize)
         snakeTail[idx].visible = True
         idx += 1
+    
+    points_label.text = "Points: " + str(game.points)
 
 def rotate_head(action):
     if action == 0:
@@ -60,7 +66,7 @@ def rotate_head(action):
 def reset(epoch):
     for tail in snakeTail: 
         tail.visible = False
-    epoch_label.text = "Epoch " + str(epoch)
+    # epoch_label.text = "Epoch " + str(epoch)
 
 def end_visualization():
     window.close()

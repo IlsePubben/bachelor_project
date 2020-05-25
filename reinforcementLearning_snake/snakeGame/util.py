@@ -37,11 +37,11 @@ def annealing_learningrate_a(e,lr):
     return annealing_learningrate(e,lr)
 
 def save_model(model):
-    filepath = ("outputs/" + param.algorithm + str(param.max_epochs) + 
+    filepath = ("outputs/new/" + param.algorithm + str(param.max_epochs) + 
                 "-v" + str(param.vision_size) +
                 "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
-                "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end) + "_VQA")
-    # model.mlp.save(filepath)
+                "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end))
+    model.mlp.save(filepath)
     print("model saved as ", filepath)
     filepath += ".txt"
     with open(filepath,"a") as file: 
@@ -51,13 +51,13 @@ def save_model(model):
     with open(filepath,"w") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    savefile = "outputs/first_q_values_" + str(param.algorithm) +  str(param.vision_size) + "_VQA"
+    savefile = "outputs/new/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))
-    savefile = "outputs/reward_"  + str(param.algorithm) +  str(param.vision_size) + "_VQA"
+    savefile = "outputs/new/reward_"  + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.cumulative_rewards)) 
-    savefile = "outputs/Qdifference_"  + str(param.algorithm) +  str(param.vision_size) + "_VQA"
+    savefile = "outputs/new/Qdifference_"  + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.difference_q_values)) 
         
@@ -75,7 +75,7 @@ def usage():
 def handle_command_line_options(argv):
     try: 
         options, args = getopt.getopt(argv, "ha:t:e:y:v:", ["help", "algorithm=", "temperature=", "epsilon=",
-                                                          "discountFactor=", "visionSize=", "lrQ=", "lrV=", "lrA="])
+                                                          "discountFactor=", "visionSize=", "lrQ=", "lrV=", "lrA=", "test="])
     except getopt.GetoptError as error:
         print(error)
         usage()
@@ -107,6 +107,9 @@ def handle_command_line_options(argv):
             param.learning_rate_v = float(value)
         elif option == "--lrA":
             param.learning_rate_a = float(value)
+        elif option == "--test":
+            param.algorithm = "test"
+            param.model_filepath = value
         else:
             usage()
             sys.exit(2)

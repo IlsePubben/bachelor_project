@@ -9,7 +9,6 @@ from keras.models import load_model
 if __name__ == '__main__': 
     util.handle_command_line_options(sys.argv[1:])
     util.show_parameters()
-    frequency = 1/15
     if param.algorithm == 'q-learning':
         # visual_game.pyglet.clock.schedule_interval(algorithms.q_learning,frequency)
         # performed as often as possible 
@@ -54,9 +53,10 @@ if __name__ == '__main__':
     # elif param.algorithm == 'manual':
     #     visual_game.pyglet.clock.schedule_interval(algorithms.manual,frequency)
     #     visual_game.pyglet.app.run()
-    # else:
-    #     model = load_model(param.algorithm)
+    # elif param.algorithm == "test":
+    #     model = load_model(param.model_filepath)
     #     numGames = input("How many games do you want to run?\n")
+    #     frequency = 1/10
     #     visual_game.pyglet.clock.schedule_interval(algorithms.test, frequency, model,int(numGames))
     #     visual_game.pyglet.app.run()
     #     print("Mean points: ", stats.mean(stats.last1000points))

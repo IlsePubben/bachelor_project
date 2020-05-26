@@ -24,4 +24,4 @@ then
     epsilon=0.1
 fi 
 
-python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}%3]} -e ${epsilon} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}]}
+python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}%3]} -e ${epsilon} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}%9]}

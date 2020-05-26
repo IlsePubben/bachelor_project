@@ -1,4 +1,4 @@
-import sys, getopt 
+import sys, getopt, os, errno
 import numpy as np
 import parameters as param
 import stats
@@ -41,16 +41,24 @@ def save_model(model):
                 "-v" + str(param.vision_size) +
                 "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
                 "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end))
+    
+    if not os.path.exists(os.path.dirname(filepath)):
+        try:
+            os.makedirs(os.path.dirname(filepath))
+        except OSError as exc: # Guard against race condition
+            if exc.errno != errno.EEXIST:
+                raise
+    
     model.mlp.save(filepath)
-    print("model saved as ", filepath)
+    
     filepath += ".txt"
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    filepath += "_last"
-    with open(filepath,"w") as file: 
-        file.write(str(stats.average_points))
-        file.write("\n")
+    # filepath += "_last"
+    # with open(filepath,"w") as file: 
+    #     file.write(str(stats.average_points))
+    #     file.write("\n")
     savefile = "outputs/new/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))
@@ -60,6 +68,8 @@ def save_model(model):
     savefile = "outputs/new/Qdifference_"  + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.difference_q_values)) 
+        
+    print("model saved as ", filepath)
         
 def usage():
     print("OPTIONS: \n -h --help\n -a --algorithm: random | manual | q-learning",

@@ -7,7 +7,7 @@ temperature = 0.1
 initial_snake_length = 3
 game_size = 12
 vision_size = 5
-max_epochs = 200
+max_epochs = 20000
 epoch = 0
 
 start_epsilon = 0.1

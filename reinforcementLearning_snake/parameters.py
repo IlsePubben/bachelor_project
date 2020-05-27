@@ -18,8 +18,8 @@ lr_start = 0.005
 lr_end = 0.0005 
 lr_annealing_factor = (lr_end/lr_start)**(1/float(max_epochs))
 learning_rate_q = lr_start
-learning_rate_v = learning_rate_q / 3
-learning_rate_a = learning_rate_q * 3
+learning_rate_v = learning_rate_q
+learning_rate_a = learning_rate_q
 
 model_filepath = ""
 algorithm = "" 

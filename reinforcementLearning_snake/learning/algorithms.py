@@ -1,6 +1,6 @@
 import numpy as np 
 from snakeGame import util, game
-# from snakeGame import visual_game
+from snakeGame import visual_game
 import parameters as param
 from keras.callbacks import LearningRateScheduler
 import keras.backend as k 
@@ -258,29 +258,34 @@ def qva_learning(timestep, q_model, v_model, a_model):
     
 
 
-# def test(timestep, model, numGames):
-#     global state
-#     global game_state
-#     global got_stuck
-#     qValues = model.predict(state.reshape(1,2 * param.vision_size**2 + 2),batch_size=1)
-#     action = np.argmax(qValues)
-#     state, reward = game_state.make_move(util.actions[action])
+def test(timestep, model, numGames):
+    global state
+    global game_state
+    global got_stuck
     
-#     if reward == param.reward_dead: 
-#         on_death()
+    if (param.epoch == 0): 
+        state = game_state.get_state()
+        param.epoch += 1
+    
+    qValues = model.predict(state.reshape(1,2 * param.vision_size**2 + 2),batch_size=1)
+    action = np.argmax(qValues)
+    state, reward = game_state.make_move(util.actions[action])
+    
+    if reward == param.reward_dead: 
+        on_death()
         
-#     if param.epoch > numGames:
-#         visual_game.end_visualization()
+    if param.epoch > numGames:
+        visual_game.end_visualization()
 
-#     if game_state.time_stuck > param.game_size**2:
-#         got_stuck += 1
-#         on_death()
+    if game_state.time_stuck > param.game_size**2:
+        got_stuck += 1
+        on_death()
     
-#     if reward == param.reward_apple:
-#         game_state.spawn_apple()
-#         game_state.update_state(state)
+    if reward == param.reward_apple:
+        game_state.spawn_apple()
+        game_state.update_state(state)
     
-#     visual_game.visualize(game_state,action)
+    visual_game.visualize(game_state,action)
 
 def on_death(): 
     global game_state
@@ -300,7 +305,7 @@ def on_death():
         tmp = False
     param.epoch += 1
     game_state = game.Game()
-    # visual_game.reset(param.epoch)
+    visual_game.reset(param.epoch)
 
 # def random_actions(timestep): 
 #     global game_state

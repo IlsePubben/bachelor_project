@@ -75,23 +75,25 @@ def get_standard_deviation(filepath):
     std = np.std(lists, axis=0)
     return list(std)
             
-def plot_directory(directory, epochs, epsilon0):
+def plot_directory(directory, epochs, epsilon0, title=""):
     x_axis = [i*100 for i in range(1,epochs//100)]
-    for filename in os.listdir(directory):
-        filepath = directory + filename
-        average = average_list_file(filepath)
-        std = get_standard_deviation(filepath)
-    
-        # plt.errorbar(x_axis, average, yerr=std, capsize=2, label=filename)
-        plt.plot(x_axis, average, label=filename)
-        plt.fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
-        # with open(filepath, "r") as file:
-        #     model = eval(file.readline())
-        # plt.plot(x_axis, model, label=filename)
+    for filename in sorted(os.listdir(directory)):
+        if filename.endswith(".txt"):
+            filepath = directory + filename
+            average = average_list_file(filepath)
+            std = get_standard_deviation(filepath)
+        
+            # plt.errorbar(x_axis, average, yerr=std, capsize=2, label=filename)
+            plt.plot(x_axis, average, label=filename)
+            plt.fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
+            # with open(filepath, "r") as file:
+            #     model = eval(file.readline())
+            # plt.plot(x_axis, model, label=filename)
     plt.xlabel("Epoch")
     plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
     plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")
     plt.legend(bbox_to_anchor=(0.0, 1), loc=2)
+    plt.title(title)
     plt.show()
 
 def plot_4_graphs(directory, title=""):

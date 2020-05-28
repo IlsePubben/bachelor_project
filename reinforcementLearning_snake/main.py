@@ -1,6 +1,6 @@
 import sys
 from snakeGame import util 
-# from snakeGame import visual_game
+from snakeGame import visual_game
 from learning import algorithms, neuralNetwork
 import parameters as param
 import stats
@@ -53,13 +53,13 @@ if __name__ == '__main__':
     # elif param.algorithm == 'manual':
     #     visual_game.pyglet.clock.schedule_interval(algorithms.manual,frequency)
     #     visual_game.pyglet.app.run()
-    # elif param.algorithm == "test":
-    #     model = load_model(param.model_filepath)
-    #     numGames = input("How many games do you want to run?\n")
-    #     frequency = 1/10
-    #     visual_game.pyglet.clock.schedule_interval(algorithms.test, frequency, model,int(numGames))
-    #     visual_game.pyglet.app.run()
-    #     print("Mean points: ", stats.mean(stats.last1000points))
+    elif param.algorithm == "test":
+        model = load_model(param.model_filepath)
+        numGames = input("How many games do you want to run?\n")
+        frequency = 1/10
+        visual_game.pyglet.clock.schedule_interval(algorithms.test, frequency, model,int(numGames))
+        visual_game.pyglet.app.run()
+        print("Mean points: ", stats.mean(stats.last1000points))
     
-    # stats.plot_average100()
+
 

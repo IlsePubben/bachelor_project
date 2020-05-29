@@ -14,4 +14,4 @@ pip install --user matplotlib
 pip install --user keras
 pip install --user --upgrade tensorflow
 
-python main.py -a q-learning -e 0.05 -y 0.99 -v 7
+python main.py -a q-learning -e 0.05 -y 0.99 -v 3

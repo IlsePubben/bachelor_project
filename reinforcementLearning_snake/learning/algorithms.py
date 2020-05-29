@@ -170,6 +170,9 @@ def qva_learning(timestep, q_model, v_model, a_model):
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), q_target, batch_size=1, epochs=1, callbacks=q_callback, verbose=0)
     a_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), a_target, batch_size=1, epochs=1, callbacks=a_callback, verbose=0)
     
+    if param.epoch % 10000 == 0: 
+        print("epoch", param.epoch , "lr_q:", k.eval(q_model.mlp.optimizer.lr), "lr_v:", k.eval(v_model.mlp.optimizer.lr), "lr_a", k.eval(a_model.mlp.optimizer.lr))
+    
     state = new_state 
     # v_value = new_vValue
     

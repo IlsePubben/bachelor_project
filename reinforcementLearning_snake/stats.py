@@ -101,7 +101,7 @@ def plot_4_graphs(directory, title=""):
     fig, axs = plt.subplots(2,2, sharex=True)
     fig.tight_layout()
     for filename in sorted(os.listdir(directory)):
-        if filename.endswith("last"): 
+        if filename.endswith(".txt"): 
             filepath = directory + filename
             average = average_list_file(filepath)
             std = get_standard_deviation(filepath)

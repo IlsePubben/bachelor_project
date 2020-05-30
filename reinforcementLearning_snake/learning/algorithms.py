@@ -61,7 +61,7 @@ def q_learning(timestep, model):
     if param.epoch >= 17950 and param.epoch <= 18050: 
         # stats.target_outputs_v.append(update)
         stats.target_outputs_q.append((target_output.flatten()).tolist())
-    if param.epoch == 1851: 
+    if param.epoch == 18051: 
         filepath = "outputs/target_outputs_q" + str(param.vision_size)
         with open(filepath,"w") as file: 
             file.write(str(stats.target_outputs_q))

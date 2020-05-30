@@ -21,6 +21,7 @@ v_callback = [LearningRateScheduler(util.annealing_learningrate_v)]
 a_callback = [LearningRateScheduler(util.annealing_learningrate_a)]
 
 tmp = True
+saved = False
 
 cumulative_reward = 0
 
@@ -58,16 +59,18 @@ def q_learning(timestep, model):
     target_output = qValues 
     target_output[0][action] = update
     
+    global saved
     if param.epoch >= 17950 and param.epoch <= 18050: 
         # stats.target_outputs_v.append(update)
         stats.target_outputs_q.append((target_output.flatten()).tolist())
-    if param.epoch == 18051: 
+    if param.epoch == 18051 and saved==False: 
         filepath = "outputs/target_outputs_q" + str(param.vision_size)
         with open(filepath,"w") as file: 
             file.write(str(stats.target_outputs_q))
         # filepath = "outputs/target_outputs_v" + str(param.vision_size)
         # with open(filepath,"w") as file: 
         #     file.write(str(stats.target_outputs_v))
+        saved = True
         print("target outputs saved")
     
     model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2),target_output,batch_size=1, epochs=1, callbacks=q_callback, verbose=0)
@@ -314,6 +317,7 @@ def on_death():
         param.epsilon -= (param.start_epsilon/(param.max_epochs-2000))
     elif tmp: 
         print("NO LONGER DECREASING EPSILON: ", param.epoch, "e =", param.epsilon) 
+        print("step for Q-values ", len(stats.target_outputs_q))
         tmp = False
     param.epoch += 1
     game_state = game.Game()

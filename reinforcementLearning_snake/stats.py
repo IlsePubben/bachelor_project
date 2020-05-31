@@ -161,16 +161,17 @@ def table(q_targets, v_targets, title):
     plt.show()  
 
 def plot_q_values(filepath):
-    x = [i for i in range(0,18530)]
+    x = [i for i in range(0,19631)]
     with open(filepath, "r") as file: 
         q_values = eval(file.readline())
-        # print(q_values)
+        print(len(q_values))
         for i in range (0,4):
             action = [row[i] for row in q_values]
             label = "Action " + str(i)
             plt.scatter(x,action,label=label, alpha=0.2)
     plt.xlabel("Step")
-    plt.ylabel("Q-value")
+    plt.ylabel("Q-target")
+    plt.axvline(10199, 0, 16, label='epsilon=0', c="BLACK")
     plt.title("Q-values between epoch 17950-18050")
     plt.legend()
     plt.show()

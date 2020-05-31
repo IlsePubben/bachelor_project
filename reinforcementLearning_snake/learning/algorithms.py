@@ -56,8 +56,11 @@ def q_learning(timestep, model):
     else:
         update = reward + param.discount_factor * maxQ
     
+    # print(qValues[0][0], action)
     target_output = qValues 
     target_output[0][action] = update
+    
+    # print(target_output, "\n")
     
     global saved
     if param.epoch >= 17950 and param.epoch <= 18050: 
@@ -177,9 +180,12 @@ def qva_learning(timestep, q_model, v_model, a_model):
     else: 
         update = reward + param.discount_factor * new_vValue
     
-    q_target = q_values
+    print(q_values)
+    q_target = q_values - 0
     q_target[0][action] = update 
     a_target = q_values - v_value
+    print (q_values, "\n")
+
         
     v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1, epochs=1, callbacks=v_callback, verbose=0)
     q_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), q_target, batch_size=1, epochs=1, callbacks=q_callback, verbose=0)

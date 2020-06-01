@@ -180,11 +180,9 @@ def qva_learning(timestep, q_model, v_model, a_model):
     else: 
         update = reward + param.discount_factor * new_vValue
     
-    print(q_values)
     q_target = q_values - 0
     q_target[0][action] = update 
     a_target = q_values - v_value
-    print (q_values, "\n")
 
         
     v_model.mlp.fit(state.reshape(1,2 * param.vision_size**2 + 2), update, batch_size=1, epochs=1, callbacks=v_callback, verbose=0)

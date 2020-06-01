@@ -55,10 +55,10 @@ def save_model(model):
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    # filepath += "_last"
-    # with open(filepath,"w") as file: 
-    #     file.write(str(stats.average_points))
-    #     file.write("\n")
+    filepath += "_last"
+    with open(filepath,"w") as file: 
+        file.write(str(stats.average_points))
+        file.write("\n")
     savefile = "outputs/new/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
     with open(savefile, "w") as file: 
         file.write(str(stats.first_q_value))

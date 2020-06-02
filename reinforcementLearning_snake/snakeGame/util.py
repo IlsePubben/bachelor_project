@@ -34,7 +34,7 @@ def annealing_learningrate_v(e,lr):
     return annealing_learningrate(e,lr)
 def annealing_learningrate_a(e,lr): 
     # print("lr A:", annealing_learningrate(e,lr) * 3, e )
-    return annealing_learningrate(e,lr)
+    return annealing_learningrate(e,lr) / 3
 
 def save_model(model):
     filepath = ("outputs/new/" + param.algorithm + str(param.max_epochs) + 

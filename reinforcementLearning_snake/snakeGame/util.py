@@ -27,20 +27,23 @@ def boltzmann_exploration(values):
 
 #a scheduler needs to accept these parameters but we're not using them
 def annealing_learningrate(e,lr): 
-    # print("lr Q:", param.lr_annealing_factor**param.epoch * param.lr_start, e )
     return param.lr_annealing_factor**param.epoch * param.lr_start
+def annealing_learningrate_q(e,lr): 
+    return annealing_learningrate(e,lr) * param.lrQ_modifier
 def annealing_learningrate_v(e,lr): 
     # print("lr V:", annealing_learningrate(e,lr) / 3, e )
-    return annealing_learningrate(e,lr)
+    return annealing_learningrate(e,lr) * param.lrV_modifier
 def annealing_learningrate_a(e,lr): 
     # print("lr A:", annealing_learningrate(e,lr) * 3, e )
-    return annealing_learningrate(e,lr) / 3
+    return annealing_learningrate(e,lr) * param.lrA_modifier
 
 def save_model(model):
-    filepath = ("outputs/new/" + param.algorithm + str(param.max_epochs) + 
-                "-v" + str(param.vision_size) +
-                "-e" + str(param.start_epsilon) + "-y" + str(param.discount_factor) + 
-                "-lr" + str(param.lr_start) + "-lr" + str(param.lr_end))
+    filepath = ("outputs/experiments/" + param.name + param.algorithm + str(param.max_epochs) + 
+                "_v" + str(param.vision_size) +
+                "_e" + str(param.start_epsilon) + "_y" + str(param.discount_factor) + 
+                "_lrQ" + str(round(param.lr_start * param.lrQ_modifier, 5)) + "-" + str(round(param.lr_end * param.lrQ_modifier, 5)) +
+                "_lrV" + str(round(param.lr_start * param.lrV_modifier, 5)) + "-" + str(round(param.lr_end * param.lrV_modifier, 5)) +
+                "_lrA" + str(round(param.lr_start * param.lrA_modifier, 5)) + "-" + str(round(param.lr_end * param.lrA_modifier, 5)))
     
     if not os.path.exists(os.path.dirname(filepath)):
         try:
@@ -49,43 +52,47 @@ def save_model(model):
             if exc.errno != errno.EEXIST:
                 raise
     
-    model.mlp.save(filepath)
+    # model.mlp.save(filepath)
     
     filepath += ".txt"
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
         file.write("\n")
-    filepath += "_last"
-    with open(filepath,"w") as file: 
-        file.write(str(stats.average_points))
-        file.write("\n")
-    savefile = "outputs/new/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
-    with open(savefile, "w") as file: 
-        file.write(str(stats.first_q_value))
-    savefile = "outputs/new/reward_"  + str(param.algorithm) +  str(param.vision_size)
-    with open(savefile, "w") as file: 
-        file.write(str(stats.cumulative_rewards)) 
-    savefile = "outputs/new/Qdifference_"  + str(param.algorithm) +  str(param.vision_size)
-    with open(savefile, "w") as file: 
-        file.write(str(stats.difference_q_values)) 
+    # filepath += "_last"
+    # with open(filepath,"w") as file: 
+    #     file.write(str(stats.average_points))
+    #     file.write("\n")
+    # savefile = "outputs/new/first_q_values_" + str(param.algorithm) +  str(param.vision_size)
+    # with open(savefile, "w") as file: 
+    #     file.write(str(stats.first_q_value))
+    # savefile = "outputs/new/reward_"  + str(param.algorithm) +  str(param.vision_size)
+    # with open(savefile, "w") as file: 
+    #     file.write(str(stats.cumulative_rewards)) 
+    # savefile = "outputs/new/Qdifference_"  + str(param.algorithm) +  str(param.vision_size)
+    # with open(savefile, "w") as file: 
+    #     file.write(str(stats.difference_q_values)) 
         
     print("model saved as ", filepath)
         
 def usage():
     print("OPTIONS: \n -h --help\n -a --algorithm: random | manual | q-learning",
            "| qv-learning | qvmax-learning | qva-learning | qvamax-learning")
-    print(" -e --epsilon: value between 0-1")
+    print(" -e --epsilon: value between 0-1, used for epsilon-greedy exploration")
     print(" -y --discountFactor: value between 0-1")
     print(" -v --visionSize: size of vision grid")
-    print(" -t --temperature: value between 0-1")
-    # print(" --lrQ: Learning rate Q_model. default=0.001")
-    # print(" --lrV: Learning rate V_model. default=0.001")
-    # print(" --lrA: Learning rate A_model. default=0.001")
+    print(" -t --temperature: value between 0-1, used for boltzman exploration")
+    print(" --lrBegin: Learning rate at the beginning of training")
+    print(" --lrEnd: Learning rate at the end of training")
+    print(" --lrQ: Factor used to modify lr_begin to get the learning rate for the Q model, default=1")
+    print(" --lrV: Factor used to modify lr_begin to get the learning rate for the V model, default=1")
+    print(" --lrA: Factor used to modify lr_begin to get the learning rate for the A model, default=1")
+    print(" -n --name: A string that will be added to the output filename")
 
 def handle_command_line_options(argv):
     try: 
-        options, args = getopt.getopt(argv, "ha:t:e:y:v:", ["help", "algorithm=", "temperature=", "epsilon=",
-                                                          "discountFactor=", "visionSize=", "lrQ=", "lrV=", "lrA=", "test="])
+        options, args = getopt.getopt(argv, "ha:t:e:y:v:n:", ["help", "algorithm=", "temperature=", "epsilon=",
+                                                          "discountFactor=", "visionSize=", "lrBegin=", "lrEnd=", 
+                                                          "lrQ=", "lrV=", "lrA=", "test=", "name="])
     except getopt.GetoptError as error:
         print(error)
         usage()
@@ -111,24 +118,30 @@ def handle_command_line_options(argv):
             param.discount_factor = float(value)
         elif option in ("-v", "--visionSize"):
             param.vision_size = int(value) 
+        elif option == "--lrBegin":
+            param.lr_start = float(value)
+            # param.lr_annealing_factor = (param.lr_end/param.lr_start)**(1/float(param.max_epochs))
+            # param.learning_rate_q = param.lr_start
+            # param.learning_rate_v = param.lr_start
+            # param.learning_rate_a = param.lr_start
+        elif option == "--lrEnd":
+            param.lr_end = float(value)
+            # param.lr_annealing_factor = (param.lr_end/param.lr_start)**(1/float(param.max_epochs))
         elif option == "--lrQ":
-            param.learning_rate_q = float(value)
+            param.lrQ_modifier = float(value)
         elif option == "--lrV":
-            param.learning_rate_v = float(value)
+            param.lrV_modifier = float(value)
         elif option == "--lrA":
-            param.learning_rate_a = float(value)
+            param.lrA_modifier = float(value)
         elif option == "--test":
             param.algorithm = "test"
             param.model_filepath = value
+        elif option in ("-n", "--name"):
+            param.name = value 
         else:
             usage()
             sys.exit(2)
+    param.set_depending_parameters()
 
-def show_parameters():
-    print("Running program with the following parameters:")
-    print("Algorithm:",param.algorithm, "\nEpsilon:",param.epsilon,
-          "\nTemperature:",param.temperature,
-          "\nVisiongrid size:",param.vision_size,
-          "\nDiscount-factor:",param.discount_factor, 
-          "\nLearning rate start:", param.lr_start,
-          "\nLearning rate end:", param.lr_end)
+
+    

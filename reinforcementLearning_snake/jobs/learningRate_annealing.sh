@@ -2,8 +2,8 @@
 #SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --job-name=all_algorithms
-#SBATCH --output=all_algorithms
+#SBATCH --job-name=learningRate_annealing
+#SBATCH --output=learningRate_annealing
 #SBATCH --mem=800
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ilse.pubben@gmail.com
@@ -18,4 +18,4 @@ pip install --user --upgrade tensorflow
 algorithm=(q-learning qv-learning qva-learning)
 visionGrid=(3 3 3 5 5 5 7 7 7)
 
-python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}%3]} -e 0.05 -v ${visionGrid[${SLURM_ARRAY_TASK_ID}%9]}
+python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}%3]} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}%9]} --name learningRate_annealing_ --lrBegin 0.005 --lrEnd 0.0005

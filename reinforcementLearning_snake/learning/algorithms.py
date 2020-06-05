@@ -16,7 +16,7 @@ step = 0
 # v_value = 0 #to speed up qv(a)-learning
 # q_values = np.zeros((1,4)) #to speed up qvmax-learniing
 
-q_callback = [LearningRateScheduler(util.annealing_learningrate)]
+q_callback = [LearningRateScheduler(util.annealing_learningrate_q)]
 v_callback = [LearningRateScheduler(util.annealing_learningrate_v)]
 a_callback = [LearningRateScheduler(util.annealing_learningrate_a)]
 

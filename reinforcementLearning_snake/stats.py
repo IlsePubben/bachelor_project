@@ -92,6 +92,7 @@ def plot_directory(directory, epochs, epsilon0, title=""):
     plt.xlabel("Epoch")
     plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
     plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")
+    plt.xlim(-100, epochs+100)
     plt.legend(bbox_to_anchor=(0.0, 1), loc=2)
     plt.title(title)
     plt.show()

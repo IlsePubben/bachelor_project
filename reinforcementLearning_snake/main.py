@@ -8,7 +8,7 @@ from keras.models import load_model
 
 if __name__ == '__main__': 
     util.handle_command_line_options(sys.argv[1:])
-    util.show_parameters()
+    param.show_parameters()
     if param.algorithm == 'q-learning':
         # visual_game.pyglet.clock.schedule_interval(algorithms.q_learning,frequency)
         # performed as often as possible 

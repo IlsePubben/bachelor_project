@@ -96,10 +96,56 @@ def plot_directory(directory, epochs, epsilon0, title=""):
     plt.legend(bbox_to_anchor=(0.0, 1), loc=2)
     plt.title(title)
     plt.show()
+    
+def plot_all_visionGrids(directory, title=""):
+    x_axis = [i*100 for i in range(1,200)]
+    fig, axs = plt.subplots(2,2, sharex='col', sharey='all')
+    fig.tight_layout()
+    
+    v3_path = directory + "/3x3/"
+    for filename in sorted(os.listdir(v3_path)):
+        if filename.endswith(".txt"): 
+            filepath = v3_path + filename
+            average = average_list_file(filepath)
+            std = get_standard_deviation(filepath)
+            axs[0,0].plot(x_axis, average, label=filename)
+            axs[0,0].fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
+    v5_path = directory + "/5x5/"
+    for filename in sorted(os.listdir(v5_path)):
+        if filename.endswith(".txt"): 
+            filepath = v5_path + filename
+            average = average_list_file(filepath)
+            std = get_standard_deviation(filepath)
+            axs[1,0].plot(x_axis, average, label=filename)
+            axs[1,0].fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
+    v7_path = directory + "/7x7/"
+    for filename in sorted(os.listdir(v7_path)):
+        if filename.endswith(".txt"): 
+            filepath = v7_path + filename
+            average = average_list_file(filepath)
+            std = get_standard_deviation(filepath)
+            axs[1,1].plot(x_axis, average, label=filename)
+            axs[1,1].fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
+    axs[0,0].legend()
+    axs[0,0].set_title("Vision grid = 3x3")
+    axs[1,0].set_title("Vision grid = 5x5")
+    axs[1,1].set_title("Vision grid = 7x7")
+    axs[0,1].set_visible(False)
+    
+    for c in axs: 
+        for ax in c: 
+            ax.axvline(18000, 0, 16, label='epsilon=0', c="BLACK")
+            ax.set_xlim(-100, 20100)
+    axs[1,0].set_xlabel('Epoch')
+    axs[1,1].set_xlabel('Epoch')
+    axs[1,0].set_ylabel("Points (average over 1000 epochs measured every 100 epochs)")
+    fig.suptitle(title)
+    
+    fig.show()
 
 def plot_4_graphs(directory, title=""):
     x_axis = [i*100 for i in range(1,200)]
-    fig, axs = plt.subplots(2,2, sharex=True)
+    fig, axs = plt.subplots(2,2, sharex=True, sharey=True)
     fig.tight_layout()
     for filename in sorted(os.listdir(directory)):
         if filename.endswith(".txt"): 
@@ -132,13 +178,13 @@ def plot_4_graphs(directory, title=""):
     axs[1,0].set_title("Rewards")
     axs[0,1].set_title("First Q-value")
     axs[1,1].set_title("Difference between Q-values")
+    axs.set_xlabel('Epoch')
+    axs.set_ylabel("Points (average over 1000 epochs measured every 100 epochs)")
     for c in axs: 
         for ax in c: 
             ax.axvline(18000, 0, 16, label='epsilon=0', c="BLACK")
     fig.suptitle(title)
     fig.show()
-    # for ax in axs: 
-    #     ax.legend()
 
 def table(q_targets, v_targets, title):
     fig = plt.figure(figsize=(8,5))

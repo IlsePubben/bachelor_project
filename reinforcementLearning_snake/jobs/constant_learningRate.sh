@@ -18,4 +18,4 @@ pip install --user --upgrade tensorflow
 algorithm=(q-learning qv-learning qva-learning)
 visionGrid=(3 3 3 5 5 5 7 7 7)
 
-python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}%3]} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}%9]} --name constantLearningRate_ --lrBegin 0.005 --lrEnd 0.005
+python main.py -a ${algorithm[${SLURM_ARRAY_TASK_ID}%3]} -v ${visionGrid[${SLURM_ARRAY_TASK_ID}%9]} --name lrQ:lrV:lrA-1:03:3_ --lrV 0.3333 --lrA 3 --lrBegin 0.005 --lrEnd 0.005

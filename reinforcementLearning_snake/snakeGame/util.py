@@ -54,6 +54,12 @@ def save_model(model):
     
     # model.mlp.save(filepath)
     
+    testPath = filepath + "_testRun"
+    with open(testPath, "a") as file: 
+        average = sum(stats.test_points) / len(stats.test_points)
+        file.write(str(average))
+        file.write('\n')
+    
     filepath += ".txt"
     with open(filepath,"a") as file: 
         file.write(str(stats.average_points))
@@ -92,7 +98,7 @@ def handle_command_line_options(argv):
     try: 
         options, args = getopt.getopt(argv, "ha:t:e:y:v:n:", ["help", "algorithm=", "temperature=", "epsilon=",
                                                           "discountFactor=", "visionSize=", "lrBegin=", "lrEnd=", 
-                                                          "lrQ=", "lrV=", "lrA=", "test=", "name="])
+                                                          "lrQ=", "lrV=", "lrA=", "play=", "name="])
     except getopt.GetoptError as error:
         print(error)
         usage()
@@ -133,8 +139,8 @@ def handle_command_line_options(argv):
             param.lrV_modifier = float(value)
         elif option == "--lrA":
             param.lrA_modifier = float(value)
-        elif option == "--test":
-            param.algorithm = "test"
+        elif option == "--play":
+            param.algorithm = "play"
             param.model_filepath = value
         elif option in ("-n", "--name"):
             param.name = value 

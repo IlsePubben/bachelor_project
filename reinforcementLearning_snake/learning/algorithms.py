@@ -200,6 +200,34 @@ def qva_learning(timestep, q_model, v_model, a_model):
         stats.difference_q_values.append(np.amax(q_values) - np.amin(q_values))
         on_death()
 
+def test(model):
+    global state
+    global game_state
+    global got_stuck
+    
+    if (param.epoch == 0): 
+        state = game_state.get_state()
+        param.epoch += 1
+    
+    values = model.mlp.predict(state.reshape(1,2 * param.vision_size**2 + 2),batch_size=1)
+    action = np.argmax(values)
+    state, reward = game_state.make_move(util.actions[action])
+    
+    if reward == param.reward_dead: 
+        param.epoch += 1
+        stats.test_points.append(game_state.points)
+        game_state = game.Game()
+
+    if game_state.time_stuck > 2000:
+        got_stuck = 0
+        param.epoch += 1
+        stats.test_points.append(game_state.points)
+        game_state = game.Game()
+    
+    if reward == param.reward_apple:
+        game_state.spawn_apple()
+        game_state.update_state(state)
+
 # def qvmax_learning(timestep, q_model, v_model):
 #     global state
 #     global game_state
@@ -277,7 +305,7 @@ def qva_learning(timestep, q_model, v_model, a_model):
     
 
 
-# def test(timestep, model, numGames):
+# def play(timestep, model, numGames):
 #     global state
 #     global game_state
 #     global got_stuck

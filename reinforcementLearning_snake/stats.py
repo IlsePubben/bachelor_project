@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt 
+from matplotlib.backends.backend_pdf import PdfPages
 from statistics import mean 
 import os
 import numpy as np 
 
 average_points = list() 
 last1000points = list()
+test_points = list() 
 max_points = 0
 counter = 0
 first_q_value = list() 
@@ -76,26 +78,50 @@ def get_standard_deviation(filepath):
     return list(std)
             
 def plot_directory(directory, epochs, epsilon0, title=""):
+    fig = plt.figure()
     x_axis = [i*100 for i in range(1,epochs//100)]
+    labels = ["Q-learning", "QV-learning", "QVA-learning"]
+    idx = 0
     for filename in sorted(os.listdir(directory)):
         if filename.endswith(".txt"):
             filepath = directory + filename
             average = average_list_file(filepath)
             std = get_standard_deviation(filepath)
         
-            # plt.errorbar(x_axis, average, yerr=std, capsize=2, label=filename)
-            plt.plot(x_axis, average, label=filename)
+            # plt.plot(x_axis, average, label=filename)
+            plt.plot(x_axis, average, label=labels[idx])
+            idx += 1
             plt.fill_between(x_axis, [a_i - s_i for a_i, s_i in zip(average,std)],[a_i + s_i for a_i, s_i in zip(average,std)], alpha=0.2)
             # with open(filepath, "r") as file:
             #     model = eval(file.readline())
             # plt.plot(x_axis, model, label=filename)
     plt.xlabel("Epoch")
-    plt.ylabel("Points (average over 1000 epochs measured every 100 epochs)")
+    plt.ylabel("Points")
     plt.axvline(epsilon0, 0, 16, label='epsilon=0', c="BLACK")
     plt.xlim(-100, epochs+100)
     plt.legend(bbox_to_anchor=(0.0, 1), loc=2)
     plt.title(title)
-    plt.show()
+    return fig
+    # plt.savefig('line_plot.pdf') 
+    # plt.show()
+    
+def plot_3x3(directory=""):
+    path = directory + "/con_1:1:1/"
+    one = plot_directory(path, 20000,18002,"lrQ=0.005 ; lrV=lrQ ; lrA=lrQ")
+    path = directory + "/an_1:1:1/"
+    two = plot_directory(path,20000,18002,"lrQ=0.005-0.0005 ; lrV=lrQ ; lrA=lrQ")
+    path = directory + "/con_1:03:3/"
+    three = plot_directory(path,20000,18002,"lrQ=0.005 ; lrV=lrQ/3 ; lrA=lrQ*3")
+    path = directory + "/con_1:03:3/"
+    four = plot_directory(path,20000,18002,"lrQ=0.005-0.0005 ; lrV=lrQ/3 ; lrA=lrQ*3")
+    
+    name = directory + "/3x3.pdf"
+    pdf = PdfPages(name)
+    pdf.savefig(one)
+    pdf.savefig(two)
+    pdf.savefig(three)
+    pdf.savefig(four)
+    pdf.close()
     
 def plot_all_visionGrids(directory, title=""):
     x_axis = [i*100 for i in range(1,200)]

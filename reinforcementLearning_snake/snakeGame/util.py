@@ -38,7 +38,7 @@ def annealing_learningrate_a(e,lr):
     return annealing_learningrate(e,lr) * param.lrA_modifier
 
 def save_model(model):
-    filepath = ("outputs/experiments/" + param.name + param.algorithm + str(param.max_epochs) + 
+    filepath = (param.saveDir + param.name + param.algorithm + str(param.max_epochs) + 
                 "_v" + str(param.vision_size) +
                 "_e" + str(param.start_epsilon) + "_y" + str(param.discount_factor) + 
                 "_lrQ" + str(round(param.lr_start * param.lrQ_modifier, 5)) + "-" + str(round(param.lr_end * param.lrQ_modifier, 5)) +
@@ -92,13 +92,14 @@ def usage():
     print(" --lrQ: Factor used to modify lr_begin to get the learning rate for the Q model, default=1")
     print(" --lrV: Factor used to modify lr_begin to get the learning rate for the V model, default=1")
     print(" --lrA: Factor used to modify lr_begin to get the learning rate for the A model, default=1")
+    print(" -d --dir: Path to directory in which the output files will be saved")
     print(" -n --name: A string that will be added to the output filename")
 
 def handle_command_line_options(argv):
     try: 
-        options, args = getopt.getopt(argv, "ha:t:e:y:v:n:", ["help", "algorithm=", "temperature=", "epsilon=",
+        options, args = getopt.getopt(argv, "ha:t:e:y:v:d:n:", ["help", "algorithm=", "temperature=", "epsilon=",
                                                           "discountFactor=", "visionSize=", "lrBegin=", "lrEnd=", 
-                                                          "lrQ=", "lrV=", "lrA=", "play=", "name="])
+                                                          "lrQ=", "lrV=", "lrA=", "play=", "dir=", "name="])
     except getopt.GetoptError as error:
         print(error)
         usage()
@@ -144,6 +145,8 @@ def handle_command_line_options(argv):
             param.model_filepath = value
         elif option in ("-n", "--name"):
             param.name = value 
+        elif option in ("-d", "--dir"):
+            param.saveDir = value 
         else:
             usage()
             sys.exit(2)

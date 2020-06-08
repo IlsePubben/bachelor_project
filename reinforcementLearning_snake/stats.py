@@ -105,17 +105,17 @@ def plot_directory(directory, epochs, epsilon0, title=""):
     # plt.savefig('line_plot.pdf') 
     # plt.show()
     
-def plot_3x3(directory=""):
+def plot_3x3(directory="", saveAs=""):
     path = directory + "/con_1:1:1/"
     one = plot_directory(path, 20000,18002,"lrQ=0.005 ; lrV=lrQ ; lrA=lrQ")
     path = directory + "/an_1:1:1/"
-    two = plot_directory(path,20000,18002,"lrQ=0.005-0.0005 ; lrV=lrQ ; lrA=lrQ")
+    two = plot_directory(path,20000,18002,"lrQ=0.005->0.0005 ; lrV=lrQ ; lrA=lrQ")
     path = directory + "/con_1:03:3/"
     three = plot_directory(path,20000,18002,"lrQ=0.005 ; lrV=lrQ/3 ; lrA=lrQ*3")
     path = directory + "/con_1:03:3/"
-    four = plot_directory(path,20000,18002,"lrQ=0.005-0.0005 ; lrV=lrQ/3 ; lrA=lrQ*3")
+    four = plot_directory(path,20000,18002,"lrQ=0.005->0.0005 ; lrV=lrQ/3 ; lrA=lrQ*3")
     
-    name = directory + "/3x3.pdf"
+    name = directory + '/' + saveAs + ".pdf"
     pdf = PdfPages(name)
     pdf.savefig(one)
     pdf.savefig(two)

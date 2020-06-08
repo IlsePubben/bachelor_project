@@ -32,7 +32,7 @@ if __name__ == '__main__':
             algorithms.qv_learning(1,qmodel,vmodel)
         param.epoch = 0
         while param.epoch <= 100:
-            algorithms.test(vmodel)
+            algorithms.test(qmodel)
         util.save_model(qmodel)
     
     elif param.algorithm == 'qvmax-learning':

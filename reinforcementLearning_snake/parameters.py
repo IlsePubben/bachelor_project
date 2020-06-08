@@ -7,7 +7,7 @@ temperature = 0.1
 initial_snake_length = 3
 game_size = 12
 vision_size = 5
-max_epochs = 20000
+max_epochs = 20
 epoch = 0
 
 start_epsilon = 0.05
@@ -27,6 +27,7 @@ learning_rate_a = lr_start * lrA_modifier
 model_filepath = ""
 algorithm = "" 
 name = ""
+saveDir = ""
 
 def set_depending_parameters(): 
     global epsilon, lr_annealing_factor, learning_rate_q, learning_rate_v, learning_rate_a

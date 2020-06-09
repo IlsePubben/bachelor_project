@@ -45,6 +45,7 @@ def save_model(model):
                 "_lrV" + str(round(param.lr_start * param.lrV_modifier, 5)) + "-" + str(round(param.lr_end * param.lrV_modifier, 5)) +
                 "_lrA" + str(round(param.lr_start * param.lrA_modifier, 5)) + "-" + str(round(param.lr_end * param.lrA_modifier, 5)))
     
+    print("FILEPATH",filepath)
     if not os.path.exists(os.path.dirname(filepath)):
         try:
             os.makedirs(os.path.dirname(filepath))

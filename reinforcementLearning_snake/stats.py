@@ -115,8 +115,7 @@ def plot_3x3(directory="", saveAs=""):
     path = directory + "/con_1:03:3/"
     four = plot_directory(path,20000,18002,"lrQ=0.005->0.0005 ; lrV=lrQ/3 ; lrA=lrQ*3")
     
-    name = directory + '/' + saveAs + ".pdf"
-    pdf = PdfPages(name)
+    pdf = PdfPages(saveAs)
     pdf.savefig(one)
     pdf.savefig(two)
     pdf.savefig(three)

@@ -3,7 +3,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 from statistics import mean 
 import os
 import numpy as np 
-from scipy.stats import shapiro, normaltest
+# from scipy.stats import shapiro, normaltest
 
 average_points = list() 
 last1000points = list()
@@ -276,39 +276,39 @@ def first_q_values(directory):
     
 ################### Actual statistics ###################
 
-def statistical_info(directory): 
-    listOfFiles = list()
-    for (dirpath, dirnames, filenames) in os.walk(directory):
-        listOfFiles += [os.path.join(dirpath, file) for file in filenames]
-    for filepath in sorted(listOfFiles):
-        if filepath.endswith("testRun"):
-            data = []
-            with open(filepath, "r") as file: 
-                lines = file.readlines()
-                for line in lines:
-                    data.append(float(line))
-            print(filepath)
-            data = np.array(data)
-            print("Mean:", np.mean(data))
-            print("Standard deviation:", np.std(data))
-            # plt.boxplot(data)
-            # plt.show()
-            # normality test
-            normal = True
-            stat, p = shapiro(data)
-            print('Shapiro normality test: Statistics=%.3f, p=%.3f' % (stat, p))
-            # interpret
-            alpha = 0.05
-            if p <= alpha:
-            	normal = False
-            if len(data) >= 20:
-                stat, p = normaltest(data)
-                print('Agostino normality test: Statistics=%.3f, p=%.3f' % (stat, p))
-                # interpret
-                if p <= alpha:
-                	normal = False
-            if normal: 
-                print("Normally distributed")
-            else: 
-                print("Not normal")
-            print('\n')
+# def statistical_info(directory): 
+#     listOfFiles = list()
+#     for (dirpath, dirnames, filenames) in os.walk(directory):
+#         listOfFiles += [os.path.join(dirpath, file) for file in filenames]
+#     for filepath in sorted(listOfFiles):
+#         if filepath.endswith("testRun"):
+#             data = []
+#             with open(filepath, "r") as file: 
+#                 lines = file.readlines()
+#                 for line in lines:
+#                     data.append(float(line))
+#             print(filepath)
+#             data = np.array(data)
+#             print("Mean:", np.mean(data))
+#             print("Standard deviation:", np.std(data))
+#             # plt.boxplot(data)
+#             # plt.show()
+#             # normality test
+#             normal = True
+#             stat, p = shapiro(data)
+#             print('Shapiro normality test: Statistics=%.3f, p=%.3f' % (stat, p))
+#             # interpret
+#             alpha = 0.05
+#             if p <= alpha:
+#             	normal = False
+#             if len(data) >= 20:
+#                 stat, p = normaltest(data)
+#                 print('Agostino normality test: Statistics=%.3f, p=%.3f' % (stat, p))
+#                 # interpret
+#                 if p <= alpha:
+#                 	normal = False
+#             if normal: 
+#                 print("Normally distributed")
+#             else: 
+#                 print("Not normal")
+#             print('\n')
